@@ -11,8 +11,8 @@
     
     <!-- Global Header -->
     <header>
-        <a href="index.html" aria-current="page">
-            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite">
+        <a href="index.html">
+            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite" width="80" height="67">
         </a>
 
         <button type="button" 
@@ -49,8 +49,11 @@
     <main id="main-content">
         <section>
             <header class="hero-header">
-                <h1>Kulinarik: Meine Leidenschaft, das Kochen</h1>
+                <p class="eyebrow">Kulinarik</p>
+                <h1>Meine Leidenschaft, das Kochen</h1>
                 <p>Willkommen in meiner kulinarischen Welt! Meine große Leidenschaft ist das Kochen. Essen ist für mich nicht nur Nahrungsaufnahme, sondern Ausgleich, Erholung und kreative Herausforderung. Auf dieser Seite nehme ich dich mit in meine Welt des Kochens: Von meiner Philosophie hinter meinem Foodblog „Bauchgefühl Rezepte“ über meine liebsten Rezeptideen bis hin zu meinem aufregenden Abenteuer bei der ZDF Küchenschlacht.</p>
+                <a href="#foodblog" class="button button--primary">Mehr zum Foodblog</a>
+                <a href="#kuechenschlacht" class="button button--secondary">Mehr zur Küchenschlacht</a>
             </header>
 
             <picture>
@@ -70,7 +73,6 @@
                         loading="lazy"
                         decoding="async">
                 </picture>
-
                 <picture>
                     <source srcset="assets/images/culinary/bauchgefuehl-rezepte-mockup-laptop-alle-rezepte.avif" type="image/avif">
                     <img src="assets/images/culinary/bauchgefuehl-rezepte-mockup-laptop-alle-rezepte.webp" 
@@ -87,8 +89,9 @@
                 </picture>
             </aside>
             
-            <article>
-                <h2>Wie und warum ist mein Foodblog entstanden?</h2>
+            <article class="content-card">
+                <p class="eyebrow">Foodblog</p>
+                <h2>Bauchgefuehl Rezepte: Wie alles begann</h2>
                 <p>Schon als kleines Mädchen habe ich meiner Mama und meiner Oma in Baden-Württemberg fasziniert beim Kochen zugeschaut und mitgeholfen. Bei uns gab es überwiegend ehrliche, traditionelle schwäbische Küche, ab und zu ergänzt durch mediterrane Klassiker. Diese frühe Begeisterung ließ mich auch während meines Lehramtsstudiums in Schwäbisch Gmünd nicht los. Wann immer es die Zeit erlaubte, stand ich am Herd. Um mich inspirieren zu lassen, verfolge ich zudem schon seit Jahren leidenschaftlich gerne Kochsendungen im Fernsehen.</p>
                 <p>Während der Corona-Zeit entstand schließlich die Idee zu meinem eigenen Foodblog „Bauchgefühl Rezepte“. Ich begann, meine Gerichte aufwendig zu fotografieren, mich in die Bildbearbeitung einzuarbeiten, Rezepte aufzuschreiben und einen eigenen Instagram-Kanal aufzubauen.</p>
                 <p>Der Name "Bauchgefühl Rezepte" ist bei mir absolute Philosophie: Ich koche selten stur nach Rezept, sondern vertraue voll und ganz auf mein Bauchgefühl. Essen ist für mich ein zentraler Bestandteil des Lebens, der Freude machen und ein rundum gutes Gefühl hinterlassen soll. Als Lehrerin ist das Kochen nach einem langen Schultag mein perfekter Ausgleich. In der Küche kann ich komplett abschalten und mich ganz auf Aromen und Kombinationen konzentrieren.</p>
@@ -98,13 +101,16 @@
 
         <section>
             <header class="section-header">
+                <p class="eyebrow">Rezepte</p>
                 <h2>Kreative Rezeptideen aus meiner Küche</h2>
                 <p>Hier findest du eine Auswahl meiner liebsten Rezeptideen, die ich auf meinem Foodblog „Bauchgefühl Rezepte“ teile. Von herzhaften Gerichten bis hin zu süßen Leckereien – lass dich inspirieren und entdecke neue Geschmackserlebnisse!</p>
+                <a href="https://www.bauchgefuehl-rezepte.de/alle-rezepte/" target="_blank" rel="noopener noreferrer" aria-label="Alle Rezepte auf dem Foodblog Bauchgefühl Rezepte anschauen (öffnet in neuem Tab)">Alle Rezepte anschauen &rarr;</a>
             </header>
 
             <ul>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Backen</span>
                         <picture>
                             <source srcset="assets/images/culinary/nutellabuchteln.avif" type="image/avif">
                             <img src="assets/images/culinary/nutellabuchteln.webp" 
@@ -112,23 +118,21 @@
                             loading="lazy" 
                             decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Backen</span>
-                        <h3>Fluffige Nutellabuchteln</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT1H40M">1 Std. 40 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Mittel</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>15 Stück</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT1H40M">1 Std. 40 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Mittel</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">15 Stück</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/nutellabuchteln/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Nutella Buchteln (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Fluffige Nutellabuchteln</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/nutellabuchteln/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Nutella Buchteln (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Suppen</span>
                         <picture>
                             <source srcset="assets/images/culinary/tom-kha-gai-suppe.avif" type="image/avif">
                             <img src="assets/images/culinary/tom-kha-gai-suppe.webp" 
@@ -136,23 +140,21 @@
                             loading="lazy" 
                             decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Suppen</span>
-                        <h3>Tom Kha Gai Suppe</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT40M">40 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Einfach</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>4 Personen</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT40M">40 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Einfach</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">4 Personen</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/tom-kha-gai/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Tom Kha Gai (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Tom Kha Gai Suppe</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/tom-kha-gai/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Tom Kha Gai (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Frühstück</span>
                         <picture>
                             <source srcset="assets/images/culinary/bananenpancakes-nutella-bananenscheiben.avif" type="image/avif">
                             <img src="assets/images/culinary/bananenpancakes-nutella-bananenscheiben.webp" 
@@ -160,23 +162,21 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Frühstück</span>
-                        <h3>Fluffige Bananenpancakes</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT20M">20 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Einfach</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>12 Stück</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT20M">20 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Einfach</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">12 Stück</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/bananenpancakes/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Bananenpancakes (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Fluffige Bananenpancakes</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/bananenpancakes/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Bananenpancakes (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Veggie</span>
                         <picture>
                             <source srcset="assets/images/culinary/tomatentarte-blaetterteig.avif" type="image/avif">
                             <img src="assets/images/culinary/tomatentarte-blaetterteig.webp" 
@@ -184,23 +184,21 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Veggie</span>
-                        <h3>Tomatentarte aus Blätterteig</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT35M">35 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Einfach</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>4 Personen</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT35M">35 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Einfach</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">4 Personen</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/tomatentarte/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Tomatentarte (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Tomatentarte aus Blätterteig</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/tomatentarte/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Tomatentarte (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Pasta</span>
                         <picture>
                             <source srcset="assets/images/culinary/spargel-garnelen-pasta.avif" type="image/avif">
                             <img src="assets/images/culinary/spargel-garnelen-pasta.webp" 
@@ -208,23 +206,21 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Pasta</span>
-                        <h3>Spargel-Garnelen-Pasta</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT50M">50 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Mittel</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>4 Personen</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT50M">50 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Mittel</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">4 Personen</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/spargel-garnelen-pasta/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Spargel Garnelen Pasta (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Spargel-Garnelen-Pasta</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/spargel-garnelen-pasta/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Spargel Garnelen Pasta (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Heimatküche</span>
                         <picture>
                             <source srcset="assets/images/culinary/baerlauchknoedel-speck-parmesan.avif" type="image/avif">
                             <img src="assets/images/culinary/baerlauchknoedel-speck-parmesan.webp" 
@@ -232,23 +228,21 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Heimatküche</span>
-                        <h3>Bärlauchknödel mit Speckwürfel und Parmesan</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT40M">40 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Mittel</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>6 Stück</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT40M">40 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Mittel</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">6 Stück</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/baerlauchknoedel/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Bärlauchknödel (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Bärlauchknödel mit Speckwürfel und Parmesan</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/baerlauchknoedel/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Bärlauchknödel (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Veggie</span>
                         <picture>
                             <source srcset="assets/images/culinary/shakshuka-feta-petersilie.avif" type="image/avif">
                             <img src="assets/images/culinary/shakshuka-feta-petersilie.webp" 
@@ -256,23 +250,21 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Veggie</span>
-                        <h3>Shakshuka mit Ei und Feta</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT40M">40 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Einfach</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>4 Personen</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT40M">40 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Einfach</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">4 Personen</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/shakshuka/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Shakshuka (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Shakshuka mit Ei und Feta</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/shakshuka/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Shakshuka (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Backen</span>
                         <picture>
                             <source srcset="assets/images/culinary/biskuitrolle-schoko-banane.avif" type="image/avif">
                             <img src="assets/images/culinary/biskuitrolle-schoko-banane.webp" 
@@ -280,23 +272,21 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Backen</span>
-                        <h3>Schoko-Bananen-Biskuitrolle</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT3H">3 h</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Mittel</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>8–10 Scheiben</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT3H">3 h</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Mittel</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">8–10 Scheiben</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/biskuitrolle/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Biskuitrolle (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Schoko-Bananen-Biskuitrolle</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/biskuitrolle/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Biskuitrolle (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="recipe-category">Pasta</span>
                         <picture>
                             <source srcset="assets/images/culinary/spaghetti-carbonara.avif" type="image/avif">
                             <img src="assets/images/culinary/spaghetti-carbonara.webp" 
@@ -304,19 +294,16 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-
-                        <span class="recipe-category">Pasta</span>
-                        <h3>Spaghetti Carbonara</h3>
                         <dl class="recipe-details">
-                            <dt>Dauer</dt>
-                            <dd><time datetime="PT25M">25 Min.</time></dd>
-                            <dt>Schwierigkeit</dt>
-                            <dd>Einfach</dd>
-                            <dt>Portionsgröße</dt>
-                            <dd>2 Personen</dd>
+                            <dt class="visually-hidden">Dauer</dt>
+                            <dd class="badge badge--subtle"><time datetime="PT25M">25 Min.</time></dd>
+                            <dt class="visually-hidden">Schwierigkeit</dt>
+                            <dd class="badge badge--subtle">Einfach</dd>
+                            <dt class="visually-hidden">Portionsgröße</dt>
+                            <dd class="badge badge--subtle">2 Personen</dd>
                         </dl>
-
-                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/spaghetti-carbonara/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Spaghetti Carbonara (öffnet in neuem Tab)">Zum Rezept</a>
+                        <h3>Spaghetti Carbonara</h3>
+                        <a class="recipe-link" href="https://www.bauchgefuehl-rezepte.de/recipe/spaghetti-carbonara/" target="_blank" rel="noopener noreferrer" aria-label="Zum Rezept Spaghetti Carbonara (öffnet in neuem Tab)">Zum Rezept &rarr;</a>
                     </article>
                 </li>
             </ul>
@@ -324,7 +311,8 @@
 
         <section id="kuechenschlacht">
             <header class="section-header">
-                <h2>Das Abenteuer ZDF Küchenschlacht</h2>
+                <p class="eyebrow">ZDF Küchenschlacht</p>
+                <h2>Mein TV-Abenteuer in Hamburg</h2>
                 <p>Ein besonderes Highlight meiner kulinarischen Reise war die Teilnahme an der ZDF Küchenschlacht. Dort konnte ich meine Kochkünste unter Beweis stellen und wertvolle Erfahrungen sammeln. Die Herausforderung, in einem professionellen Umfeld zu kochen, hat mir nicht nur Spaß gemacht, sondern auch meine Fähigkeiten weiterentwickelt.</p>
 
                 <picture>
@@ -341,7 +329,7 @@
                     <details>
                         <summary>
                             <span class="timeline-step">01</span>
-                            <span class="timeline-title">Bewerbung</span>
+                            <span class="timeline-title">Die Bewerbung</span>
                         </summary>
                         <article>
                             <h3>Bewerbung</h3>
@@ -353,7 +341,7 @@
                     <details>
                         <summary>
                             <span class="timeline-step">02</span>
-                            <span class="timeline-title">Probekochen</span>
+                            <span class="timeline-title">Das Probekochen</span>
                         </summary>
                         <article>
                             <h3>Akribisches Probekochen</h3>
@@ -390,12 +378,27 @@
                                 </picture>
                                 <figcaption>Anrichten im TV-Studio</figcaption>
                             </figure>
-                            <h4>Tages-Highlights</h4>
                             <ul>
-                                <li><strong>Tag 1 (Leibgericht):</strong> Trotz Umstellung auf den fremden Herd reichte es mit meinen schwedischen Köttbullar bei Juror Thomas Martin für einen soliden 2. Platz.</li>
-                                <li><strong>Tag 2 (Vorspeise):</strong> Schon deutlich entspannter konnte ich mit meinem asiatisch angehauchten Thunfischtatar bei Jurorin Sara Henke direkt den ersten Tagessieg sichern.</li>
-                                <li><strong>Tag 3 (Vegetarisch):</strong> Meine peruanische Causa mit Süßkartoffel und gegrillter Avocado überzeugte die schwedische Jurorin Titti Qvarnström komplett – erneuter Tagessieg!</li>
-                                <li><strong>Tag 4 (Motto „Frühlingsküche“):</strong> Mein anspruchsvollstes Gericht (Spinatnocke mit konfiertem Saibling) verlangte mir in 35 Minuten alles ab. Es war extrem stressig, aber Jurorin Zora Klipp war begeistert: Tagessieg Nummer 3!</li>
+                                <li class="kuechenschlacht-day-card">
+                                    <span class="badge badge--secondary">Leibgericht</span>
+                                    <h4>Tag 1</h4>
+                                    <p>Trotz Umstellung auf den fremden Herd reichte es mit meinen schwedischen Köttbullar bei Juror Thomas Martin für einen soliden 2. Platz.</p>
+                                </li>
+                                <li class="kuechenschlacht-day-card">
+                                    <span class="badge badge--secondary">Vorspeise</span>
+                                    <h4>Tag 2</h4>
+                                    <p>Schon deutlich entspannter konnte ich mit meinem asiatisch angehauchten Thunfischtatar bei Jurorin Sara Henke direkt den ersten Tagessieg sichern.</p>
+                                </li>
+                                <li class="kuechenschlacht-day-card">
+                                    <span class="badge badge--secondary">Vegetarisch</span>
+                                    <h4>Tag 3</h4>
+                                    <p>Meine peruanische Causa mit Süßkartoffel und gegrillter Avocado überzeugte die schwedische Jurorin Titti Qvarnström komplett – erneuter Tagessieg!</p>
+                                </li>
+                                <li class="kuechenschlacht-day-card">
+                                    <span class="badge badge--secondary">„Frühlingsküche“</span>
+                                    <h4>Tag 4</h4>
+                                    <p>Mein anspruchsvollstes Gericht (Spinatnocke mit Saibling) verlangte mir in 35 Minuten alles ab. Es war stressig, aber Jurorin Zora Klipp war begeistert: Tagessieg Nummer 3!</p>
+                                </li>
                             </ul>
                         </article>
                     </details>
@@ -408,8 +411,8 @@
                         </summary>
                         <article>
                             <h3>Das Finale &amp; mein Fazit</h3>
-                            <p>Mit drei Tagessiegen im Rücken ging ich voller Freude ins Finale am Freitag. Es galt, das Finalgericht von Viktoria Fuchs nachzukochen: Gebratene Perlhuhnbrust mit Frühlingskräuter-Risotto und Morchelrahm. Leider gab es beim Kochen kleinere zeitliche Hürden, sodass am Ende etwas der Schliff beim Abschmecken fehlte. Jurorin Milena Broger bewertete meinen Teller schließlich mit einem hervorragenden 2. Platz der Gesamtwoche.</p>
-                            <p>Auch wenn ein kleiner Wermutstropfen blieb, nicht in die Champions Week eingezogen zu sein: Die Erfahrung, das tolle Team hinter den Kulissen und der Austausch in unserer Kochgruppe waren einfach unvergesslich!</p>
+                            <p>Mit drei Tagessiegen im Rücken ging ich voller Freude ins Finale am Freitag. Es galt, das Finalgericht von Viktoria Fuchs nachzukochen: Gebratene Perlhuhnbrust mit Frühlingskräuter-Risotto und Morchelrahm. Leider gab es beim Kochen kleinere zeitliche Hürden, sodass am Ende etwas der Schliff beim Abschmecken fehlte. Jurorin Milena Broger bewertete meinen Teller schließlich mit einem hervorragenden 2. Platz der Gesamtwoche.<br>
+                            Auch wenn ein kleiner Wermutstropfen blieb, nicht in die Champions Week eingezogen zu sein: Die Erfahrung, das tolle Team hinter den Kulissen und der Austausch in unserer Kochgruppe waren einfach unvergesslich!</p>
                             <figure>
                                 <picture>
                                     <source srcset="/assets/images/culinary/gruppenselfie-sechs-personen-tv-studio-backstage-kuechenschlacht.avif" type="image/avif">
@@ -427,10 +430,13 @@
         </section>
 
         <section>
+            <p class="eyebrow">Küchenschlacht-Rezepte</p>
             <h2>Die Rezepte meiner Küchenschlacht-Woche</h2>
             <ul>
                 <li>
                     <article class="recipe-card">
+                        <span class="badge badge--subtle">Montag</span>
+                        <span class="badge badge--subtle">Leibgericht</span>
                         <picture>
                             <source srcset="assets/images/culinary/gericht-tag1-koettbullar-kartoffelpueree.avif" type="image/avif">
                             <img src="assets/images/culinary/gericht-tag1-koettbullar-kartoffelpueree.webp" 
@@ -438,14 +444,15 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-                        <span class="recipe-day">Montag</span>
-                        <span class="recipe-category">Leibgericht</span>
+                        
                         <h3>Schwedische Köttbullar mit brauner Sauce, Kartoffelpüree, gepickelten Gurken und Preiselbeeren</h3>
-                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-100~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Montag herunterladen (öffnet in neuem Tab)">Rezept herunterladen</a>
+                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-100~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Montag herunterladen (öffnet in neuem Tab)">Rezept herunterladen &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="badge badge--subtle">Dienstag</span>
+                        <span class="badge badge--subtle">Vorspeise</span>
                         <picture>
                             <source srcset="assets/images/culinary/gericht-tag2-thunfischtatar-mango.avif" type="image/avif">
                             <img src="assets/images/culinary/gericht-tag2-thunfischtatar-mango.webp" 
@@ -453,14 +460,15 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-                        <span class="recipe-day">Dienstag</span>
-                        <span class="recipe-category">Vorspeise</span>
+                        
                         <h3>Thunfisch-Tatar mit Avocado, Mango-Salat, Limetten-Mayonnaise und Wan-Tan-Chips</h3>
-                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-102~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Dienstag herunterladen (öffnet in neuem Tab)">Rezept herunterladen</a>
+                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-102~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Dienstag herunterladen (öffnet in neuem Tab)">Rezept herunterladen &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="badge badge--subtle">Mittwoch</span>
+                        <span class="badge badge--subtle">Vegetarisch</span>
                         <picture>
                             <source srcset="assets/images/culinary/gericht-tag3-suesskartoffel-causa.avif" type="image/avif">
                             <img src="assets/images/culinary/gericht-tag3-suesskartoffel-causa.webp" 
@@ -468,14 +476,15 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-                        <span class="recipe-day">Mittwoch</span>
-                        <span class="recipe-category">Vegetarisch</span>
+                        
                         <h3>„Peruanische Causa“: Süßkartoffelstampf mit Quinoa, gegrillter Avocado, gepickelten roten Zwiebeln, Sour Cream und Mais-Chips</h3>
-                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-104~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Mittwoch herunterladen (öffnet in neuem Tab)">Rezept herunterladen</a>
+                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-104~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Mittwoch herunterladen (öffnet in neuem Tab)">Rezept herunterladen &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="badge badge--subtle">Donnerstag</span>
+                        <span class="badge badge--subtle">Frühlingsküche</span>
                         <picture>
                             <source srcset="assets/images/culinary/gericht-tag4-spinatnocke-saibling.avif" type="image/avif">
                             <img src="assets/images/culinary/gericht-tag4-spinatnocke-saibling.webp" 
@@ -483,14 +492,15 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-                        <span class="recipe-day">Donnerstag</span>
-                        <span class="recipe-category">Frühlingsküche</span>
+                        
                         <h3>Spinatnocke mit konfiertem Saibling, Buttermilchsud, Bärlauchöl und Fischhaut-Chip</h3>
-                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-106~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Donnerstag herunterladen (öffnet in neuem Tab)">Rezept herunterladen</a>
+                        <a class="recipe-link" href="https://www.zdf.de/assets/rezept-von-anja-crhak-106~original" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Donnerstag herunterladen (öffnet in neuem Tab)">Rezept herunterladen &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="recipe-card">
+                        <span class="badge badge--subtle">Freitag</span>
+                        <span class="badge badge--subtle">Finalgericht</span>
                         <picture>
                             <source srcset="assets/images/culinary/gericht-tag5-perlhuhnbrust-kraeuterrisotto.avif" type="image/avif">
                             <img src="assets/images/culinary/gericht-tag5-perlhuhnbrust-kraeuterrisotto.webp" 
@@ -498,10 +508,9 @@
                                 loading="lazy" 
                                 decoding="async">
                         </picture>
-                        <span class="recipe-day">Freitag</span>
-                        <span class="recipe-category">Finale</span>
+                        
                         <h3>Gebratene Perlhuhnbrust mit Frühlingskräuter-Risotto, gebratenem grünen Spargel und Morchelrahm (Rezept von Viktoria Fuchs)</h3>
-                        <a class="recipe-link" href="https://www.zdf.de/assets/finalrezept-fuer-die-kandidatinnen-128~original?cb=1742899548789" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Freitag herunterladen (öffnet in neuem Tab)">Rezept herunterladen</a>
+                        <a class="recipe-link" href="https://www.zdf.de/assets/finalrezept-fuer-die-kandidatinnen-128~original?cb=1742899548789" target="_blank" rel="noopener noreferrer" aria-label="Rezept für Freitag herunterladen (öffnet in neuem Tab)">Rezept herunterladen &rarr;</a>
                     </article>
                 </li>
             </ul>
@@ -512,7 +521,7 @@
     <footer>
         <div>
             <a href="index.html" aria-label="Anja Crhak Portfolio – Zur Startseite">
-                <img src="assets/images/logos/logo-ac-temp.svg" alt="" aria-hidden="true">
+                <img src="assets/images/logos/logo-ac-temp.svg" alt="" aria-hidden="true" width="120" height="101">
                 Anja Crhak | Portfolio
             </a>
         </div>

@@ -10,8 +10,8 @@
     
     <!-- Global Header -->
     <header>
-        <a href="index.html" aria-current="page">
-            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite">
+        <a href="index.html">
+            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite" width="80" height="67">
         </a>
 
         <button type="button" 
@@ -47,12 +47,13 @@
     <!-- Main content -->
     <main id="main-content">
         <section>
+            <p class="eyebrow">Story</p>
             <h1>Meine persönliche Geschichte</h1>
             <p>Vom Unterrichten an einer Realschule in Deutschland über den Mut zum Neuanfang im Fernstudium der Medieninformatik bis hin zu meinem Lebensmittelpunkt in Schweden.</p>
         </section>
 
         <article class="story-article">
-            <section class="story-entry">
+            <section class="content-card" id="turnverein-klassenzimmer">
                 <p class="story-time">
                     <time datetime="2011">2011</time>–<time datetime="2018">2018</time></p>
                
@@ -60,7 +61,7 @@
                 <p>Schon seit meiner Jugend hat mir die Arbeit mit Kindern und Jugendlichen unglaublich viel Freude bereitet. Angefangen hat alles ehrenamtlich beim TSV Lorch – erst im Kinderturnen, später als Trainerin im Leistungsturnen. Für mich war schnell klar, dass ich diese Leidenschaft auch zu meinem Beruf machen möchte. Von 2011 bis 2016 studierte ich daher Lehramt an der Pädagogischen Hochschule in Schwäbisch Gmünd. Aus Begeisterung für Bewegung und Naturwissenschaften wählte ich neben Mathematik und Physik das Fach Sport. Nach dem Studium folgte das Referendariat an der Kastell Realschule in Welzheim, das ich 2018 erfolgreich abschloss.</p>
             </section>
 
-            <section class="story-entry">
+            <section class="content-card" id="klassenzimmer-schul-it">
                 <p class="story-time">
                     <time datetime="2018">2018</time>–<time datetime="2021">2021</time>
                 </p>
@@ -68,7 +69,7 @@
                 <p>Im Anschluss an das Referendariat zog ich zu meinem Freund und heutigen Ehemann nach Mainz. Von 2018 bis 2021 unterrichtete ich an der Realschule Plus in Gau-Odernheim die Klassenstufen 5 bis 10. Neben dem Unterricht entdeckte ich schnell mein starkes Interesse an digitalen Strukturen im Schulalltag: Als Digitalbeauftragte übernahm ich die Administration unserer Schulplattform iServ, betreute das Mobile Device Management für die Lehr- und Schüler-Tablets und kümmerte mich um die technische Einrichtung der Apple TVs in den Klassenzimmern. Auch privat ließ mich das digitale Gestalten nicht los: Über meine Leidenschaft fürs Kochen und das Erstellen meines eigenen Foodblogs sammelte ich ganz nebenbei erste praktische Erfahrungen im Webdesign.</p>
             </section>
 
-            <section class="story-entry">
+            <section class="content-card" id="neuanfang-in-schweden">
                 <p class="story-time">
                     <time datetime="2021">2021</time>
                 </p>
@@ -76,7 +77,7 @@
                 <p>Im Jahr 2021 wagten mein Mann und ich einen großen Schritt und fassten den Entschluss, Deutschland den Rücken zu kehren. Mit dem Umzug nach Schweden begann für mich nicht nur ein neuer Lebensabschnitt, sondern auch eine berufliche Neuorientierung. Ich verabschiedete mich vom Unterrichten und schrieb mich für den Studiengang Medieninformatik (B.Sc.) an der IU Internationalen Hochschule im Fernstudium ein, um meiner Begeisterung für IT, Design und Logik ein Fundament zu geben.</p>
             </section>
 
-            <section class="story-entry">
+            <section class="content-card" id="e-commerce-projekt">
                 <p class="story-time">
                     <time datetime="2021">2021</time>–<time datetime="2025">2025</time>
                 </p>
@@ -84,7 +85,7 @@
                 <p>Das Gelernte blieb bei mir nicht lange graue Theorie: Parallel zum Studium entwickelte ich für die Firma meines Mannes, Independent Racing, einen sehr komplexen und umfangreichen Online-Shop für Motorraddekore und -zubehör. Dort konnte ich mein theoretisches Wissen direkt in der Praxis anwenden und wertvolle Erfahrungen in der Entwicklung und im E-Commerce sammeln. Da dieses Projekt sowie weitere kleine Website-Aufträge zeitintensiver waren als gedacht, rückte das Studium zeitweise etwas in den Hintergrund. Seit dem erfolgreichen Abschluss des Shops im Jahr 2025 liegt mein voller Fokus nun wieder darauf, mein Medieninformatik-Studium zügig abzuschließen und weitere spannende IT-Projekte umzusetzen.</p>
             </section>
 
-            <section class="story-entry">
+            <section class="content-card" id="blick-nach-vorn">
                 <p class="story-time">
                     <time datetime="2026">2026</time>
                 </p>
@@ -92,13 +93,39 @@
                 <p>Heute habe ich in Schweden nicht nur meinen Lebensmittelpunkt gefunden, sondern auch beruflich den Platz, an dem meine Leidenschaften zusammenfließen. Die Kombination aus pädagogischem Hintergrund, praxisnaher E-Commerce-Erfahrung und theoretischer Medieninformatik gibt mir das Handwerkszeug, um digitale Produkte nicht nur funktional, sondern vor allem nutzerfreundlich zu gestalten. Der Ausgleich am Herd und die schwedische Natur halten den Kopf frei für neue Ideen. Mit dem zukünftigen Abschluss meines Studiums startet das nächste Kapitel – bereit für spannende Projekte, neue Kontakte und kreative Herausforderungen im Webbereich.</p>
             </section>
         </article>
+        <aside class="story-sidebar" aria-label="Autorin und Inhaltsverzeichnis">
+            <figure>
+                <picture>
+                    <source srcset="assets/images/portraits/anja-crhak-portrait-hellgruener-blazer.avif" type="image/avif">
+                    <img src="assets/images/portraits/anja-crhak-portrait-hellgruener-blazer.webp" 
+                        alt="Porträt von Anja Crhak in einem hellgrünen Blazer." 
+                        decoding="async">
+                </picture>
+                <figcaption>
+                    <strong>Anja Crhak</strong>
+                    <p>Von der Lehrerin in Deutschland zur Medieninformatikerin in Schweden</p>
+                </figcaption>
+            </figure>
+
+            <nav aria-label="Inhaltsverzeichnis der Story">
+                <p class="story-sidebar-heading-table">Inhaltsverzeichnis</p>
+                <ul>
+                    <li><a href="#turnverein-klassenzimmer">Vom Turnverein ins Klassenzimmer</a></li>
+                    <li><a href="#klassenzimmer-schul-it">Klassenzimmer, Schul-IT und erste Schritte im Webdesign</a></li>
+                    <li><a href="#neuanfang-in-schweden">Neuanfang in Schweden: Der Wechsel in die Medieninformatik</a></li>
+                    <li><a href="#e-commerce-projekt">Vom Theorie-Wissen zum E-Commerce-Projekt</a></li>
+                    <li><a href="#blick-nach-vorn">Der Blick nach vorn</a></li>
+                </ul>
+            </nav>
+        
+        </aside>
     </main>
     
     <!-- Global Footer -->
     <footer>
         <div>
             <a href="index.html" aria-label="Anja Crhak Portfolio – Zur Startseite">
-                <img src="assets/images/logos/logo-ac-temp.svg" alt="" aria-hidden="true">
+                <img src="assets/images/logos/logo-ac-temp.svg" alt="" aria-hidden="true" width="120" height="101">
                 Anja Crhak | Portfolio
             </a>
         </div>

@@ -11,8 +11,8 @@
     
     <!-- Global Header -->
     <header>
-        <a href="index.html" aria-current="page">
-            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite">
+        <a href="index.html">
+            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite" width="80" height="67">
         </a>
 
         <button type="button" 
@@ -48,18 +48,20 @@
     <!-- Main content -->
     <main id="main-content">
         <section>
-            <h1>Meine Webdesign-Projekte &amp; Studienarbeiten</h1>
-            <p>Praxisnahe E-Commerce-Lösungen, individuelle Websites und interaktive UI/UX-Konzepte</p>
+            <p class="eyebrow">Kundenprojekte &amp; Studienarbeiten</p>
+            <h1>Ausgewählte Arbeiten für Web, E-Commerce &amp; UI/UX</h1>
             <p>Ein Einblick in meine Arbeit als Webdesignerin sowie in praxisorientierte Projekte aus meinem Medieninformatik-Studium. Hier verbinde ich benutzerzentriertes Design, saubere Informationsarchitekturen und funktionale Web-Technologien.</p>
-            <a href="#client-projects">Zu den Kundenprojekten</a>
-            <a href="#academic-projects">Zu den Studienprojekten</a>
+            <a href="#client-projects" class="button button--primary">Zu den Kundenprojekten</a>
+            <a href="#academic-projects" class="button button--secondary">Zu den Studienprojekten</a>
         </section>
 
         <section id="client-projects">
-            <h2>Kunden- &amp; Praxisprojekte</h2>
+            <p class="eyebrow">Kunden- &amp; Praxisprojekte</p>
+            <h2>Maßgeschneiderte Webauftritte &amp; Online-Shops</h2>
             <ul>
                 <li>
-                    <article class="project-card">
+                    <article class="project-card-detailed">
+                        <span class="badge badge--surface">E-Commerce &amp; Webdesign</span>
                         <picture>
                             <source srcset="assets/images/projects/independent-racing-website-multidevice-mockup.avif" type="image/avif">
                             <img src="assets/images/projects/independent-racing-website-multidevice-mockup.webp"
@@ -68,21 +70,19 @@
                                 decoding="async">
                         </picture>
 
-                        <span class="project-category">E-Commerce &amp; Webdesign</span>
+                        <ul class="project-highlights" aria-label="Eingesetzte Technologien &amp; Highlights">
+                            <li class="badge badge--subtle">WooCommerce</li>
+                            <li class="badge badge--subtle">Elementor</li>
+                            <li class="badge badge--subtle">Live-Konfigurator</li>
+                        </ul>
                         <h3>Independent Racing - Online-Shop Relaunch</h3>
                         <p>Ganzheitlicher Shop-Relaunch für individuelles Motocross- und Supermoto-Dekor auf WordPress- und WooCommerce-Basis. Kernstück ist ein nahtlos integrierter Live-Konfigurator für Kunden-Anpassungen.</p>
-
-                        <ul class="project-highlights" aria-label="Eingesetzte Technologien &amp; Highlights">
-                            <li class="project-tag">WooCommerce</li>
-                            <li class="project-tag">Elementor</li>
-                            <li class="project-tag">Live-Konfigurator</li>
-                        </ul>
-
-                        <a class="project-link" href="https://independent-racing.com/" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Independent Racing (öffnet in neuem Tab)">Zur Website</a>
+                        <a class="project-link" href="https://independent-racing.com/" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Independent Racing (öffnet in neuem Tab)">Zur Website &rarr;</a>
                     </article>
                 </li>
                 <li>
-                    <article class="project-card">
+                    <article class="project-card-detailed">
+                        <span class="badge badge--surface">B2B Webdesign</span>
                         <picture>
                             <source srcset="assets/images/projects/netsystem-petzold-website-multidevice-mockup.avif" type="image/avif">
                             <img src="assets/images/projects/netsystem-petzold-website-multidevice-mockup.webp" 
@@ -90,45 +90,20 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-                       
-                        <span class="project-category">B2B Webdesign</span>
+
+                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
+                            <li class="badge badge--subtle">WordPress</li>
+                            <li class="badge badge--subtle">Elementor</li>
+                            <li class="badge badge--subtle">Custom Post Types</li>
+                        </ul>
                         <h3>Netzsystem Petzold – Corporate Website</h3>
                         <p>Neugestaltung des Webauftritts für ein B2B-Unternehmen im Bereich Netzmontage. Der Fokus lag auf einer klaren Informationsarchitektur, vertrauensbildender visueller Sprache und Lead-Generierung.</p>
-
-                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">WordPress</li>
-                            <li class="project-tag">Elementor</li>
-                            <li class="project-tag">Custom Post Types</li>
-                        </ul>
-
-                        <a class="project-link" href="https://netsystem-petzold.de/" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Netzsystem Petzold (öffnet in neuem Tab)">Zur Website</a>
+                        <a class="project-link" href="https://netsystem-petzold.de/" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Netzsystem Petzold (öffnet in neuem Tab)">Zur Website &rarr;</a>
                     </article>
                 </li>
                 <li>
-                    <article class="project-card">
-                        <picture>
-                            <source srcset="assets/images/projects/crhak-stays-website-multidevice-mockup.avif" type="image/avif">
-                            <img src="assets/images/projects/crhak-stays-website-multidevice-mockup.webp" 
-                                alt="Responsive Webdesign-Mockup der Website Crhak Stays auf verschiedenen Bildschirmgrößen." 
-                                loading="lazy" 
-                                decoding="async">
-                        </picture>
-                       
-                        <span class="project-category">Webdesign &amp; Content</span>
-                        <h3>Crhak Stays – Ferienhaus-Vermietung</h3>
-                        <p>Minimalistisches, skandinavisches Webdesign zur Präsentation eines Ferienhauses in Schweden. Die Benutzeroberfläche wurde für eine intuitive Ausstattungsübersicht und nahtlose UX auf allen Endgeräten optimiert.</p>
-
-                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">WordPress</li>
-                            <li class="project-tag">Elementor</li>
-                            <li class="project-tag">Content</li>
-                        </ul>
-
-                        <a class="project-link" href="https://crhak-stays.com" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Crhak Stays (öffnet in neuem Tab)">Zur Website</a>
-                    </article>
-                </li>
-                <li>
-                    <article class="project-card">
+                    <article class="project-card-detailed">
+                        <span class="badge badge--surface">Foodblog &amp; Content</span>
                         <picture>
                             <source srcset="assets/images/projects/bauchgefuehl-rezepte-website-multidevice-mockup.avif" type="image/avif">
                             <img src="assets/images/projects/bauchgefuehl-rezepte-website-multidevice-mockup.webp"
@@ -136,22 +111,20 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-                       
-                        <span class="project-category">Foodblog &amp; Content Management</span>
-                        <h3>Bauchgefühl Rezepte – Foodblog</h3>
-                        <p>Konzeption und technische Umsetzung meines eigenen Foodblogs. Fokus auf übersichtliche Rezeptkategorien, saubere Lesbarkeit und eine einfache Pflege der Inhalte.</p>
 
                         <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">WordPress</li>
-                            <li class="project-tag">Recipe UX</li>
-                            <li class="project-tag">Fotografie</li>
+                            <li class="badge badge--subtle">WordPress</li>
+                            <li class="badge badge--subtle">Recipe UX</li>
+                            <li class="badge badge--subtle">Fotografie</li>
                         </ul>
-
-                        <a class="project-link" href="https://bauchgefuehl-rezepte.de/" target="_blank" rel="noopener noreferrer" aria-label="Zum Blog Bauchgefühl Rezepte (öffnet in neuem Tab)">Zum Blog</a>
+                        <h3>Bauchgefühl Rezepte – Foodblog</h3>
+                        <p>Konzeption und technische Umsetzung meines eigenen Foodblogs. Fokus auf übersichtliche Rezeptkategorien, saubere Lesbarkeit und eine einfache Pflege der Inhalte.</p>
+                        <a class="project-link" href="https://bauchgefuehl-rezepte.de/" target="_blank" rel="noopener noreferrer" aria-label="Zum Blog Bauchgefühl Rezepte (öffnet in neuem Tab)">Zum Blog &rarr;</a>
                     </article>
                 </li>
                 <li>
-                    <article class="project-card">
+                    <article class="project-card-detailed">
+                        <span class="badge badge--surface">Portfolio &amp; UI-Umsetzung</span>
                         <picture>
                             <source srcset="assets/images/projects/tim-c-portfolio-website-multidevice-mockup.avif" type="image/avif">
                             <img src="assets/images/projects/tim-c-portfolio-website-multidevice-mockup.webp"
@@ -160,28 +133,48 @@
                                 decoding="async">
                         </picture>
                        
-                        <span class="project-category">Portfolio &amp; UI-Umsetzung</span>
+                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
+                            <li class="badge badge--subtle">WordPress</li>
+                            <li class="badge badge--subtle">Elementor</li>
+                            <li class="badge badge--subtle">Custom Post Types</li>
+                        </ul>
                         <h3>Tim C. – Designer Portfolio</h3>
                         <p>Technische Umsetzung eines anspruchsvollen, vorgegebenen Layouts für einen Grafik- und Kommunikationsdesigner. Präzise Code-Anpassungen zur exakten visuellen Wiedergabe.</p>
-
+                        <a class="project-link" href="https://timc.se" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Tim C. (öffnet in neuem Tab)">Zur Website &rarr;</a>
+                    </article>
+                </li>
+                <li>
+                    <article class="project-card-detailed">
+                        <span class="badge badge--surface">Webdesign &amp; Content</span>
+                        <picture>
+                            <source srcset="assets/images/projects/crhak-stays-website-multidevice-mockup.avif" type="image/avif">
+                            <img src="assets/images/projects/crhak-stays-website-multidevice-mockup.webp" 
+                                alt="Responsive Webdesign-Mockup der Website Crhak Stays auf verschiedenen Bildschirmgrößen." 
+                                loading="lazy" 
+                                decoding="async">
+                        </picture>
+                       
                         <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">WordPress</li>
-                            <li class="project-tag">Elementor</li>
-                            <li class="project-tag">Custom Post Types</li>
+                            <li class="badge badge--subtle">WordPress</li>
+                            <li class="badge badge--subtle">Elementor</li>
+                            <li class="badge badge--subtle">Content</li>
                         </ul>
-
-                        <a class="project-link" href="https://timc.se" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Tim C. (öffnet in neuem Tab)">Zur Website</a>
+                        <h3>Crhak Stays – Ferienhaus-Vermietung</h3>
+                        <p>Minimalistisches, skandinavisches Webdesign zur Präsentation eines Ferienhauses in Schweden. Die Benutzeroberfläche wurde für eine intuitive Ausstattungsübersicht und nahtlose UX auf allen Endgeräten optimiert.</p>
+                        <a class="project-link" href="https://crhak-stays.com" target="_blank" rel="noopener noreferrer" aria-label="Zur Website von Crhak Stays (öffnet in neuem Tab)">Zur Website &rarr;</a>
                     </article>
                 </li>
             </ul>
         </section>
 
         <section id="academic-projects">
-            <h2>Akademische Studienprojekte (Medieninformatik)</h2>
+            <p class="eyebrow">Studienprojekte</p>
+            <h2>Praxisnahe Konzepte aus dem Studium</h2>
             <p>Im Rahmen meines Medieninformatik-Studiums habe ich praxisnahe Projekte umgesetzt, die meine Fähigkeiten in Webentwicklung, UI/UX-Design und interaktiven Anwendungen demonstrieren.</p>
             <ul>
                 <li>
                     <article class="project-card">
+                        <span class="badge badge--surface">Frontend Development</span>
                         <picture>
                             <source srcset="assets/images/projects/ipad-mockup-emissionsvergleich.avif" type="image/avif">
                             <img src="assets/images/projects/ipad-mockup-emissionsvergleich.webp"
@@ -190,21 +183,19 @@
                                 decoding="async">
                         </picture>
 
-                        <span class="project-category">Frontend Development</span>
+                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
+                            <li class="badge badge--subtle">HTML5</li>
+                            <li class="badge badge--subtle">CSS3</li>
+                            <li class="badge badge--subtle">JavaScript</li>
+                        </ul>
                         <h3>CO<sub>2</sub> Footprint – Interaktive Datenanalyse</h3>
                         <p>Entwicklung einer responsiven Web-Anwendung zum interaktiven Vergleich globaler CO<sub>2</sub>-Emissionsdaten mit dynamischer Datentabelle.</p>
-
-                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">Frontend</li>
-                            <li class="project-tag">HTML5</li>
-                            <li class="project-tag">CSS3</li>
-                        </ul>
-
-                        <a class="project-link" href="https://anjacrhak91.github.io/2026-04-co2_emissionen/" target="_blank" rel="noopener noreferrer" aria-label="Zur Demo von CO2-Footprint (öffnet in neuem Tab)">Zur Demo</a>
+                        <a class="project-link" href="https://anjacrhak91.github.io/2026-04-co2_emissionen/" target="_blank" rel="noopener noreferrer" aria-label="Zur Demo von CO2-Footprint (öffnet in neuem Tab)">Zur Demo &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="project-card">
+                        <span class="badge badge--surface">UI/UX-Konzept</span>
                         <picture>
                             <source srcset="assets/images/projects/iphone-mockup-kitchen-hub.avif" type="image/avif">
                             <img src="assets/images/projects/iphone-mockup-kitchen-hub.webp"
@@ -213,19 +204,19 @@
                                 decoding="async">
                         </picture>
 
-                        <span class="project-category">UI/UX-Konzept</span>
+                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
+                            <li class="badge badge--subtle">UI/UX Research</li>
+                            <li class="badge badge--subtle">UI/UX Design</li>
+                            <li class="badge badge--subtle">Figma</li>
+                        </ul>
                         <h3>KitchenHub – Social Media Plattform</h3>
                         <p>Benutzerzentriertes Konzeptionsprojekt für eine Social Media Plattform für Hobbyköch:innen. Entwicklung einer durchdachten Informationsarchitektur, Navigation und Prototypen mit Figma.</p>
-
-                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">UI/UX Research</li>
-                            <li class="project-tag">UI/UX Design</li>
-                            <li class="project-tag">Figma</li>
-                        </ul>
+                        <a class="project-link" href="https://www.figma.com/proto/ouIRZFYzFOWt3SAH0YMnCR/KitchenHub?node-id=414-7658&p=f&t=KqDCghN9KIu2JxQM-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" rel="noopener noreferrer" aria-label="Zum Preview von KitchenHub (öffnet in neuem Tab)">Zum Preview &rarr;</a>
                     </article>
                 </li>
                 <li>
                     <article class="project-card">
+                        <span class="badge badge--surface">UI/UX-Konzept</span>
                         <picture>
                             <source srcset="assets/images/projects/ipad-mockup-e-learning-konzept.avif" type="image/avif">
                             <img src="assets/images/projects/ipad-mockup-e-learning-konzept.webp"
@@ -233,20 +224,19 @@
                                 loading="lazy"
                                 decoding="async">
                         </picture>
-
-                        <span class="project-category">Interactive Media</span>
-                        <h3>Mathe-App – E-Learning für Grundschulkinder</h3>
-                        <p>Gestalterisches und didaktisches Konzept zur Motivationsförderung im Grundschul-Mathematikunterricht. Dabei wurden UX- und UI-Design für eine kindgerechte und motivierende Lernanwendung entwickelt.</p>
-
+                        
                         <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">UX für Kinder</li>
-                            <li class="project-tag">UI Design</li>
-                            <li class="project-tag">Figma</li>
+                            <li class="badge badge--subtle">UX für Kinder</li>
+                            <li class="badge badge--subtle">UI Design</li>
+                            <li class="badge badge--subtle">E-Learning</li>
                         </ul>
+                        <h3>Mathe-App - E-Learning für Grundschulkinder</h3>
+                        <p>Gestalterisches und didaktisches Konzept zur Motivationsförderung im Grundschul-Mathematikunterricht. Dabei wurden UX- und UI-Design für eine kindgerechte und motivierende Lernanwendung entwickelt.</p>
                     </article>
                 </li>
                 <li>
                     <article class="project-card">
+                        <span class="badge badge--surface">UI/UX Audit</span>
                         <picture>
                             <source srcset="assets/images/projects/iphone-mockup-mk-fitness.avif" type="image/avif">
                             <img src="assets/images/projects/iphone-mockup-mk-fitness.webp" 
@@ -255,18 +245,47 @@
                                 decoding="async">
                         </picture>
 
-                        <span class="project-category">UI/UX Audit</span>
+                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
+                            <li class="badge badge--subtle">UI Audit</li>
+                            <li class="badge badge--subtle">Webdesign</li>
+                            <li class="badge badge--subtle">Figma</li>
+                        </ul>
                         <h3>MK Personal Fitness – UI/UX-Redesign</h3>
                         <p>Redesign-Prozess im Rahmen des Kurses „User Interface Design“. Erstellung zweier funktional unterschiedlicher Varianten auf Basis von Audits und Analysen.</p>
-
-                        <ul class="project-highlights" aria-label="Kernkompetenzen und Highlights">
-                            <li class="project-tag">UI Audit</li>
-                            <li class="project-tag">Webdesign</li>
-                            <li class="project-tag">Figma</li>
-                        </ul>
+                        <a class="project-link" href="https://www.figma.com/proto/IRM7jOTFGTqG5iM3OX8nbz/MK-Fitness-Variante-1?node-id=31-545&p=f&t=04Abrs8dwsRkW39e-1&scaling=min-zoom&content-scaling=fixed&page-id=20%3A52" target="_blank" rel="noopener noreferrer" aria-label="Zum Preview von MK Personal Fitness (öffnet in neuem Tab)">Zum Preview &rarr;</a>
                     </article>
                 </li>
             </ul>
+        </section>
+
+        <section>
+            <header class="section-header">
+                <p class="eyebrow">Kontakt</p>
+                <h2>Lust auf ein gemeinsames Projekt?</h2>
+                <p>Ob Feedback zu meinen Studienarbeiten, Fragen zur Webentwicklung oder eine konkrete Projektanfrage: Lass uns ins Gespräch kommen. Ich freue mich von dir zu hören!</p>
+            </header>
+
+            <form aria-labelledby="contact-form-heading" 
+                action="mailto:anja.crhak@iu-study.org" 
+                method="post" 
+                enctype="text/plain">
+                <h3 id="contact-form-heading">Schreibe mir direkt!</h3>
+                <label class="visually-hidden" for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="Dein Name">
+
+                <label class="visually-hidden" for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="Deine E-Mail">
+
+                <label class="visually-hidden" for="message">Nachricht:</label>
+                <textarea id="message" name="message" rows="3" required placeholder="Deine Nachricht..."></textarea>
+
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">
+                    Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+                </label>
+
+                <button type="submit" class="button button--primary">Nachricht senden</button>
+            </form>
         </section>
     </main>
 
@@ -274,7 +293,7 @@
     <footer>
         <div>
             <a href="index.html" aria-label="Anja Crhak Portfolio – Zur Startseite">
-                <img src="assets/images/logos/logo-ac-temp.svg" alt="" aria-hidden="true">
+                <img src="assets/images/logos/logo-ac-temp.svg" alt="" aria-hidden="true" width="120" height="101">
                 Anja Crhak | Portfolio
             </a>
         </div>

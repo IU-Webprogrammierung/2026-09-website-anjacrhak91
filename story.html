@@ -10,13 +10,31 @@
     
     <!-- Global Header -->
     <header>
-        <a href="index.html">Anja Crhak</a>
+        <a href="index.html" aria-current="page">
+            <img src="assets/images/logos/logo-ac-temp.svg" alt="Anja Crhak - Startseite">
+        </a>
 
-        <nav aria-label="Hauptnavigation">
+        <button type="button" 
+            id="theme-toggle" 
+            aria-label="Dunkelmodus"
+            aria-pressed="false">
+            <span aria-hidden="true">&#x263D;</span>
+        </button>
+
+        <button type="button"
+            class="site-nav__hamburger" 
+            aria-label="Navigation öffnen" 
+            aria-expanded="false" 
+            aria-controls="site-nav-menu">
+            <span class="site-nav__hamburger-icon" aria-hidden="true"></span>
+        </button>
+
+        <!--Main Navigation-->
+        <nav id="site-nav-menu" aria-label="Hauptnavigation">
             <ul>
                 <li><a href="karriere.html">Karriere</a></li>
                 <li><a href="projekte.html">Projekte</a></li>
-                <li><a href="story.html" aria-current="page">Story</a></li>
+                <li><a href="story.html">Story</a></li>
                 <li><a href="kulinarik.html">Kulinarik</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
             </ul>

@@ -1,0 +1,19 @@
+{
+  "name": "Anja Crhak",
+  "short_name": "Anja Crhak",
+  "icons": [
+    {
+      "src": "/assets/favicon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#9D925D",
+  "background_color": "#FDFDFC",
+  "display": "standalone"
+}

@@ -107,23 +107,34 @@
         <section>
             <h2>Oder schreibe mir eine Nachricht!</h2>
             <form action="mailto:anja.crhak@iu-study.org" method="post" enctype="text/plain">
-                <label class="visually-hidden" for="name">Name:</label>
+                <label for="name">
+                    Name: <span aria-hidden="true">*</span>
+                    <span class="visually-hidden">(Pflichtfeld)</span>
+                </label>
                 <input type="text" id="name" name="name" autocomplete="name" required placeholder="Dein Name">
 
-                <label class="visually-hidden" for="email">E-Mail:</label>
+                <label for="email">
+                    E-Mail: <span aria-hidden="true">*</span>
+                    <span class="visually-hidden">(Pflichtfeld)</span>
+                </label>
                 <input type="email" id="email" name="email" autocomplete="email" required placeholder="Deine E-Mail">
 
-                <label class="visually-hidden" for="subject">Betreff:</label>
-                <input type="text" id="subject" name="subject" required placeholder="Worum geht es?" >
+                <label for="subject">Betreff:</label>
+                <input type="text" id="subject" name="subject" placeholder="Worum geht es?" >
 
-                <label class="visually-hidden" for="message">Nachricht:</label>
+                <label for="message">
+                    Nachricht: <span aria-hidden="true">*</span>
+                    <span class="visually-hidden">(Pflichtfeld)</span>
+                </label>
                 <textarea id="message" name="message" rows="5" required placeholder="Deine Nachricht..."></textarea>
 
                 <input type="checkbox" id="consent" name="consent" required>
                 <label for="consent">
                     Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+                    <span aria-hidden="true">*</span>
+                    <span class="visually-hidden">(Pflichtfeld)</span>
                 </label>
-
+                <p aria-hidden="true">Mit * markierte Felder sind Pflichtfelder.</p>
                 <button class="button button--primary" type="submit">Nachricht senden</button>
             </form>
         </section>

@@ -106,6 +106,7 @@ Die HTML-Dateien sind strikt nach Standards der digitalen Barrierefreiheit (WCAG
 ├── projekte.html         # Projektübersicht
 ├── story.html            # Persönliche Story
 └── README.md             # Projektdokumentation
+```
 
 ## Autor
 **Anja Crhak**  

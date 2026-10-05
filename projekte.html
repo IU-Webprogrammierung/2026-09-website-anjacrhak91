@@ -51,7 +51,7 @@
     </header>
 
     <!-- Main content -->
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
         <section>
             <p class="eyebrow">Kundenprojekte &amp; Studienarbeiten</p>
             <h1>Ausgewählte Arbeiten für Web, E-Commerce &amp; UI/UX</h1>
@@ -272,29 +272,27 @@
 
             <form action="mailto:anja.crhak@iu-study.org" method="post" enctype="text/plain">
                 <label for="name">
-                    Name: <span aria-hidden="true">*</span>
-                    <span class="visually-hidden">(Pflichtfeld)</span>
+                    Name: <span class="required-asterisk" aria-hidden="true">*</span>
                 </label>
                 <input type="text" id="name" name="name" autocomplete="name" required placeholder="Dein Name">
 
                 <label for="email">
-                    E-Mail: <span aria-hidden="true">*</span>
-                    <span class="visually-hidden">(Pflichtfeld)</span>
+                    E-Mail: <span class="required-asterisk" aria-hidden="true">*</span>
                 </label>
                 <input type="email" id="email" name="email" autocomplete="email" required placeholder="Deine E-Mail">
 
                 <label for="message">
-                    Nachricht: <span aria-hidden="true">*</span>
-                    <span class="visually-hidden">(Pflichtfeld)</span>
+                    Nachricht: <span class="required-asterisk" aria-hidden="true">*</span>
                 </label>
-                <textarea id="message" name="message" rows="5" required placeholder="Deine Nachricht..."></textarea>
+                <textarea id="message" name="message" rows="3" required placeholder="Deine Nachricht..."></textarea>
 
                 <input type="checkbox" id="consent" name="consent" required>
                 <label for="consent">
-                    Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
-                    <span aria-hidden="true">*</span>
-                    <span class="visually-hidden">(Pflichtfeld)</span>
+                    Ich stimme der Verarbeitung meiner Daten zu.
+                    <span class="required-asterisk" aria-hidden="true">*</span>
                 </label>
+                <a href="datenschutz.html" target="_blank" aria-label="Datenschutzerklärung lesen (öffnet in neuem Tab)">Datenschutzerklärung lesen</a>
+
                 <p aria-hidden="true">Mit * markierte Felder sind Pflichtfelder.</p>
                 <button class="button button--primary" type="submit">Nachricht senden</button>
             </form>

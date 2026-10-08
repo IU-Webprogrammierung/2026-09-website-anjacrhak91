@@ -83,7 +83,7 @@
   :root {
     --fs-body: var(--fs-l);
 
-    --container-padding: clamp(var(--space-xl), 8.333vw, 7.5rem);
+    --container-padding: var(--space-xl);
     --grid-columns: 12;
     --grid-gutter: var(--space-xl);
 

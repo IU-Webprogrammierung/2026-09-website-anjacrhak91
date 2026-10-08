@@ -1,10 +1,5 @@
 .legal-card {
-
-    >h2+p,
-    >h3+p {
-        margin-block-start: var(--space-sm);
-    }
-
+    /* list styling */
     ul {
         list-style: disc;
         padding-inline-start: var(--space-xl);
@@ -12,5 +7,11 @@
 
     li+li {
         margin-block-start: var(--space-xs);
+    }
+
+    /* margin-styling */
+    >h2+p,
+    >h3+p {
+        margin-block-start: var(--space-sm);
     }
 }

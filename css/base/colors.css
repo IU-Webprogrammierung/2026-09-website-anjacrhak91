@@ -1,0 +1,48 @@
+:root {
+  color-scheme: light;
+
+  /* Palette, identical in both modes */
+  --color-brand-1: #9d925d;
+  --color-brand-2: #d58632;
+  --color-light-1: #fdfdfc;
+  --color-light-2: #f8f6ec;
+  --color-light-3: #ecebe3;
+  --color-dark-1: #292814;
+  --color-dark-2: #45433b;
+  --color-dark-3: #595854;
+
+  /* Semantic colors, light mode */
+  --color-bg-main: var(--color-light-1);
+  --color-bg-surface: var(--color-light-2);
+  --color-bg-subtle: var(--color-light-3);
+
+  --color-text-heading: var(--color-dark-1);
+  --color-text-body: var(--color-dark-2);
+  --color-text-muted: var(--color-dark-3);
+
+  --color-border-subtle: var(--color-light-3);
+  --color-border-strong: var(--color-dark-3);
+  --color-border-interactive: var(--color-brand-1);
+  --color-border-dark: var(--color-dark-1);
+
+  --color-brand-primary: var(--color-brand-1);
+  --color-brand-secondary: var(--color-brand-2);
+}
+
+/* Semantic colors, dark mode (data-theme="dark" on <html>) */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg-main: var(--color-dark-1);
+  --color-bg-surface: var(--color-dark-2);
+  --color-bg-subtle: var(--color-dark-3);
+
+  --color-text-heading: var(--color-light-1);
+  --color-text-body: var(--color-light-2);
+  --color-text-muted: var(--color-light-3);
+
+  --color-border-subtle: var(--color-dark-3);
+  --color-border-strong: var(--color-light-3);
+  --color-border-interactive: var(--color-brand-2);
+  --color-border-dark: var(--color-light-1);
+}

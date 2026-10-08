@@ -91,6 +91,16 @@ body {
 .body-m { font-size: var(--fs-m); line-height: var(--lh-body); }
 .body-l { font-size: var(--fs-l); line-height: var(--lh-body); }
 
+/* Body (responsive size) */
+.body-responsive {
+  font-size: var(--fs-m);
+  line-height: var(--lh-body);
+
+  @media (min-width: 48rem) {
+    font-size: var(--fs-l);
+  }
+}
+
 .body-m--semibold {
   font-size: var(--fs-m);
   font-weight: var(--fw-semibold);

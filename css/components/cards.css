@@ -1,6 +1,9 @@
 .content-card {
     display: block;
     padding: var(--space-xl);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border-subtle);
+    background: var(--color-bg-surface);
 
     >*+* {
         margin-block-start: var(--space-md);
@@ -14,14 +17,63 @@
         margin-block-start: var(--space-xl);
     }
 
-    border-radius: var(--radius-card);
-    border: 1px solid var(--color-border-subtle);
-    background: var(--color-bg-surface);
-
     >h2,
     >h3 {
         hyphens: auto;
         overflow-wrap: normal;
     }
+}
+
+.competence-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-md);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border-subtle);
+    background: var(--color-bg-surface);
+
+    >.badge+h3 {
+        margin-block-start: var(--space-lg);
+    }
+
+    >h3+p {
+        margin-block-start: var(--space-sm);
+    }
+
+}
+
+.tool-card {
+    >figure {
+        display: grid;
+        padding: var(--space-md);
+        border-radius: var(--radius-card);
+        border: 1px solid var(--color-border-subtle);
+        background: var(--color-bg-surface);
+
+        >img,
+        >.badge {
+            grid-area: 1 / 1;
+        }
+
+        >.badge {
+            justify-self: start;
+            align-self: start;
+        }
+
+        >img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    >figure + h3 {
+        margin-block-start: var(--space-lg);
+    }
+
+    >h3 + p {
+        margin-block-start: var(--space-sm);
+    }
+
 
 }

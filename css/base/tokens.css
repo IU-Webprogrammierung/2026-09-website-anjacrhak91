@@ -43,9 +43,8 @@
   --space-4xl: 6rem;
 
   /* Border radius */
-  --radius-button: 2.5rem;
   --radius-card: 1.25rem;
-  --radius-image: 2.5rem;
+  --radius-button: 2.5rem;
   --radius-badge: 999px;
 
   /* Shadows */
@@ -60,6 +59,7 @@
   /* Layout grid, mobile values */
   --container-max: 75rem;
   --container-padding: 1.25rem;
+  --container-inline-padding: max(var(--container-padding), (100% - var(--container-max))/2);
   --grid-columns: 4;
   --grid-gutter: var(--space-md);
 }

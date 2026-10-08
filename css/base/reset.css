@@ -30,7 +30,6 @@ body {
 /* Media behaves like block elements and never overflows its container */
 img,
 picture,
-video,
 svg {
   display: block;
   max-width: 100%;

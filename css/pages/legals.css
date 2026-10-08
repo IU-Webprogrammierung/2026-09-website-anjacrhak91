@@ -12,6 +12,6 @@
     /* margin-styling */
     >h2+p,
     >h3+p {
-        margin-block-start: var(--space-sm);
+        margin-block-start: var(--space-md);
     }
 }

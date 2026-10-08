@@ -6,15 +6,15 @@
     background: var(--color-bg-surface);
 
     >*+* {
-        margin-block-start: var(--space-md);
+        margin-block-start: var(--space-lg);
     }
 
     >p+h2 {
-        margin-block-start: var(--space-sm);
+        margin-block-start: var(--space-md);
     }
 
     >h2+p {
-        margin-block-start: var(--space-xl);
+        margin-block-start: var(--space-2xl);
     }
 
     >h2,

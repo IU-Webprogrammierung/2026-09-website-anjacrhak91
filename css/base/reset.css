@@ -73,3 +73,8 @@ h6 {
     scroll-behavior: auto;
   }
 }
+
+/* Normal font-style for address element*/
+address {
+  font-style: normal;
+}

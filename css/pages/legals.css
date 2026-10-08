@@ -1,0 +1,16 @@
+.legal-card {
+
+    >h2+p,
+    >h3+p {
+        margin-block-start: var(--space-sm);
+    }
+
+    ul {
+        list-style: disc;
+        padding-inline-start: var(--space-xl);
+    }
+
+    li+li {
+        margin-block-start: var(--space-xs);
+    }
+}

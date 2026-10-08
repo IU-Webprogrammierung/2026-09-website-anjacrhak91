@@ -1,0 +1,27 @@
+.content-card {
+    display: block;
+    padding: var(--space-xl);
+
+    >*+* {
+        margin-block-start: var(--space-md);
+    }
+
+    >p+h2 {
+        margin-block-start: var(--space-sm);
+    }
+
+    >h2+p {
+        margin-block-start: var(--space-xl);
+    }
+
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border-subtle);
+    background: var(--color-bg-surface);
+
+    >h2,
+    >h3 {
+        hyphens: auto;
+        overflow-wrap: normal;
+    }
+
+}

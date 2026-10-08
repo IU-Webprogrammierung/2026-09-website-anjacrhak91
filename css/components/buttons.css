@@ -28,6 +28,7 @@
       transform: scale(1.05);
     }
   }
+
   &:focus-visible {
     outline: 2px solid var(--color-border-dark);
     outline-offset: 2px;
@@ -40,5 +41,16 @@
 
   &.button--secondary {
     background: var(--color-brand-1);
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
+  @media (min-width: 48rem) {
+    flex-direction: row;
+    gap: var(--space-xl);
   }
 }

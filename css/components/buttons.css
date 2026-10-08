@@ -8,7 +8,7 @@
   transition: transform 0.2s ease-in-out;
 
   /* Button Text */
-  color: var(--color-text-heading);
+  color: var(--color-text-on-brand);
   font-family: var(--font-body);
   font-size: var(--fs-l);
   font-weight: var(--fw-bold);

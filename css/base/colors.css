@@ -28,6 +28,8 @@
 
   --color-brand-primary: var(--color-brand-1);
   --color-brand-secondary: var(--color-brand-2);
+
+  --color-focus: var(--color-border-dark);
 }
 
 /* Semantic colors, dark mode (data-theme="dark" on <html>) */

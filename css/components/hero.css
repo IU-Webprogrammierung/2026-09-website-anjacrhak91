@@ -4,7 +4,6 @@
     padding-inline: var(--container-inline-padding);
 
     >header {
-        grid-column: 1 / -1;
 
         >p+h1 {
             margin-block-start: var(--space-sm);
@@ -12,10 +11,16 @@
 
         >h1+p {
             margin-block-start: var(--space-lg);
+            max-width: 80ch;
         }
 
         >p+.button-group {
             margin-block-start: var(--space-xl);
+        }
+
+        >h1 {
+            max-width: 30ch;
+            text-wrap: balance;
         }
     }
 
@@ -33,8 +38,23 @@
             grid-column: 1 / -1;
         }
 
+        >header {
+            grid-column: 1 / -1;
+        }
+        /* additional breakpoint prevents buttons in the hero section from wrapping */
         @media (min-width: 64rem) {
             gap: var(--grid-gutter);
+
+            >picture {
+                grid-column: span 5;
+            }
+
+            >header {
+                grid-column: span 7;
+            }
+        }
+
+        @media (min-width: 73rem) {
 
             >picture {
                 grid-column: span 6;

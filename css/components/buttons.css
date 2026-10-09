@@ -8,6 +8,7 @@
   transition: transform 0.2s ease-in-out;
 
   /* Button Text */
+  text-align: center;
   color: var(--color-text-on-brand);
   font-family: var(--font-body);
   font-size: var(--fs-l);
@@ -46,11 +47,12 @@
 
 .button-group {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: var(--space-md);
 
   @media (min-width: 48rem) {
     flex-direction: row;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
   }
 }

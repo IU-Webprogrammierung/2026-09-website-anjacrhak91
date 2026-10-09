@@ -1,0 +1,149 @@
+body {
+    >header {
+        padding-inline: var(--container-inline-padding);
+        padding-block: var(--space-lg);
+        background-color: var(--color-bg-surface);
+
+        /* Navbar is intentionally wider than the content area on desktop */
+        @media (min-width: 64rem) {
+            padding-inline: var(--space-xl);
+        }
+
+        >.navbar {
+            display: flex;
+            min-height: 5rem;
+            padding: var(--space-md) var(--space-xl);
+            /* Keeps the action buttons on the right while the nav is hidden on mobile */
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-3xl);
+
+            border-radius: var(--radius-badge);
+            background-color: var(--color-brand-1);
+
+            /* Focus styles for all elements in navbar*/
+            :focus-visible {
+                outline: 2px solid var(--color-text-on-brand);
+                outline-offset: 2px;
+            }
+
+            >a {
+                transition: transform 0.2s ease-in-out;
+
+                @media (prefers-reduced-motion: reduce) {
+                    transition: none;
+                }
+
+                /* Link States */
+                &:hover {
+                    @media (prefers-reduced-motion: no-preference) {
+                        transform: scale(1.2);
+                    }
+                }
+
+                >img {
+                    height: 47px;
+                    width: auto;
+                }
+            }
+
+            >nav {
+                /* Hidden on mobile, the hamburger toggle replaces it */
+                display: none;
+                /* Pushes nav and action buttons to the right on desktop */
+                margin-inline-start: auto;
+
+                @media (min-width: 64rem) {
+                    display: block;
+                }
+
+                >ul {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: var(--space-xl);
+
+                    >li>a {
+                        display: inline-block;
+                        /* Transparent border prevents layout shift on hover and current page */
+                        border: 1px solid transparent;
+                        border-radius: var(--radius-button);
+                        color: var(--color-text-on-brand);
+                        font-weight: var(--fw-semibold);
+                        padding: var(--space-sm) var(--space-md);
+
+                        /* Hover and current page share the same pill style */
+                        &:hover,
+                        &[aria-current="page"] {
+                            border-color: var(--color-border-pill);
+                            background: var(--color-bg-pill);
+                        }
+                    }
+                }
+            }
+
+            >.action-buttons {
+                display: flex;
+                gap: var(--space-lg);
+                align-items: center;
+
+                >.theme-toggle {
+                    /* Minimum touch target size */
+                    min-height: 44px;
+                    min-width: 44px;
+                    padding: var(--space-xs);
+                    border-radius: var(--radius-badge);
+                    border: 2px solid var(--color-text-on-brand);
+                    color: var(--color-text-on-brand);
+
+                    /* Button States */
+                    &:hover {
+                        background-color: var(--color-text-on-brand);
+                        color: var(--color-brand-1);
+                    }
+                }
+
+                >.hamburger-toggle {
+                    /* Minimum touch target size */
+                    min-height: 44px;
+                    min-width: 44px;
+
+                    /* Only needed while the nav is hidden */
+                    @media (min-width: 64rem) {
+                        display: none;
+                    }
+
+                    >.hamburger-toggle-icon {
+                        /* Middle bar of the hamburger icon, ::before and ::after draw the top and bottom bars */
+                        display: block;
+                        width: 36px;
+                        height: 4px;
+                        border-radius: var(--radius-badge);
+                        background-color: var(--color-text-on-brand);
+                        position: relative;
+
+                        &::before,
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 36px;
+                            height: 4px;
+                            border-radius: var(--radius-badge);
+                            background-color: var(--color-text-on-brand);
+                        }
+
+                        /* Offset sets the gap between the bars */
+                        &::before {
+                            top: -12px;
+                        }
+
+                        &::after {
+                            bottom: -12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

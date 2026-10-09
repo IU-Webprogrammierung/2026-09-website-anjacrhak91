@@ -40,7 +40,6 @@ body {
   font-weight: var(--fw-regular);
   line-height: var(--lh-body);
   color: var(--color-text-body);
-  background: var(--color-bg-main);
 }
 
 /* Titles (Space Grotesk) */

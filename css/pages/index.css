@@ -1,0 +1,23 @@
+.culinary-card {
+    >picture {
+        aspect-ratio: 3 / 2;
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    >picture+h3 {
+        margin-block-start: var(--space-lg);
+    }
+
+    >h3+p {
+        margin-block-start: var(--space-sm);
+    }
+
+    >p+.link-m {
+        margin-block-start: var(--space-sm);
+    }
+}

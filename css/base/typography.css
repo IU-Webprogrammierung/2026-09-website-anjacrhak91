@@ -133,9 +133,11 @@ body {
 /* Links */
 .link-m,
 .link-l {
+  display: inline-block;
   font-weight: var(--fw-bold);
   line-height: var(--lh-ui);
   text-decoration: underline;
+  color: var(--color-text-heading);
 }
 
 .link-m { font-size: var(--fs-m); }

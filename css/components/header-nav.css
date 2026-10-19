@@ -5,6 +5,7 @@ body {
         background-color: var(--color-bg-surface);
         position: sticky;
         top: 0;
+        z-index: 1000;
         overflow: hidden;
 
         /* Navbar is intentionally wider than the content area on desktop */

@@ -40,6 +40,12 @@ textarea {
   color: inherit;
 }
 
+/* Remove default fieldset styling */
+fieldset {
+  border: none;
+  min-inline-size: 0;
+}
+
 button {
   background: none;
   border: none;

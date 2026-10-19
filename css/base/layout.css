@@ -40,6 +40,7 @@ main {
   }
 }
 
+/* Styling for contact section attached on footer */
 .contact-section {
   padding-inline: var(--container-inline-padding);
   padding-block: var(--space-2xl);
@@ -167,4 +168,17 @@ picture {
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-button);
   background: var(--color-bg-surface);
+}
+
+/* Section header styling*/
+.section-header {
+  margin-block-end: var(--space-2xl);
+
+  >.subtitle+h2 {
+    margin-block-start: var(--space-sm);
+  }
+  >h2+p,
+  >p+.link-l {
+    margin-block-start: var(--space-lg);
+  }
 }

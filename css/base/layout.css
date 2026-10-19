@@ -11,8 +11,8 @@ main {
 .page-content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
-  padding-block: var(--space-xl);
+  gap: var(--space-4xl);
+  padding-block: var(--space-2xl);
   padding-inline: var(--container-inline-padding);
   background-color: var(--color-bg-main);
   border-radius: var(--radius-button) var(--radius-button) 0 0;
@@ -26,8 +26,8 @@ main {
     padding-block: var(--space-4xl);
   }
 
-  &.page-content--spacious {
-    gap: var(--space-4xl);
+  &.page-content--compact {
+    gap: var(--space-xl);
   }
 
   &.page-content--contact-end {

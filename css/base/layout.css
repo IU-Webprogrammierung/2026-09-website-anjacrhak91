@@ -1,6 +1,6 @@
 /* Page surfaces */
 body {
-    background: var(--color-bg-main);
+  background: var(--color-bg-main);
 }
 
 main {
@@ -17,6 +17,39 @@ main {
   background-color: var(--color-bg-main);
   border-radius: var(--radius-button) var(--radius-button) 0 0;
   border-top: 1px solid var(--color-border-subtle);
+
+  @media (min-width: 48rem) {
+    padding-block: var(--space-2xl);
+  }
+
+  @media (min-width: 64rem) {
+    padding-block: var(--space-4xl);
+  }
+
+  &.page-content--spacious {
+    gap: var(--space-4xl);
+  }
+
+  &.page-content--contact-end {
+    padding-inline: 0;
+    padding-block-end: 0;
+
+    >section:not(.contact-section) {
+      padding-inline: var(--container-inline-padding);
+    }
+  }
+}
+
+.contact-section {
+  padding-inline: var(--container-inline-padding);
+  padding-block: var(--space-2xl);
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-button) var(--radius-button) 0 0;
+  border-top: 1px solid var(--color-border-subtle);
+
+  @media (min-width: 64rem) {
+    padding-block: var(--space-4xl);
+  }
 }
 
 /* Container setup for page centering and max-width clamping */
@@ -33,23 +66,63 @@ main {
 }
 
 /* Base & Mobile grid utilities (4-column grid) */
-.col-full { grid-column: 1 / -1; } /* 100% width across any breakpoint */
-.col-sm-2 { grid-column: span 2; } /* 50% (1/2) width on mobile (2 of 4 columns) */
+.col-full {
+  grid-column: 1 / -1;
+}
+
+/* 100% width across any breakpoint */
+.col-sm-2 {
+  grid-column: span 2;
+}
+
+/* 50% (1/2) width on mobile (2 of 4 columns) */
 
 /* Tablet (8-column grid) */
 @media (min-width: 48rem) {
-  .col-md-2 { grid-column: span 2; } /* 25% (2 of 8 columns) */
-  .col-md-4 { grid-column: span 4; } /* 50% (4 of 8 columns) */
-  .col-md-8 { grid-column: span 8; } /* 100% (8 of 8 columns) */
+  .col-md-2 {
+    grid-column: span 2;
+  }
+
+  /* 25% (2 of 8 columns) */
+  .col-md-4 {
+    grid-column: span 4;
+  }
+
+  /* 50% (4 of 8 columns) */
+  .col-md-8 {
+    grid-column: span 8;
+  }
+
+  /* 100% (8 of 8 columns) */
 }
 
 /* Desktop (12-column grid) */
 @media (min-width: 64rem) {
-  .col-lg-3  { grid-column: span 3; } /* 25% (3 of 12 columns) */
-  .col-lg-4  { grid-column: span 4; } /* 33.3% (4 of 12 columns) */
-  .col-lg-6  { grid-column: span 6; } /* 50% (6 of 12 columns) */
-  .col-lg-8  { grid-column: span 8; } /* 66.6% (8 of 12 columns) */
-  .col-lg-12 { grid-column: span 12; } /* 100% (12 of 12 columns) */
+  .col-lg-3 {
+    grid-column: span 3;
+  }
+
+  /* 25% (3 of 12 columns) */
+  .col-lg-4 {
+    grid-column: span 4;
+  }
+
+  /* 33.3% (4 of 12 columns) */
+  .col-lg-6 {
+    grid-column: span 6;
+  }
+
+  /* 50% (6 of 12 columns) */
+  .col-lg-8 {
+    grid-column: span 8;
+  }
+
+  /* 66.6% (8 of 12 columns) */
+  .col-lg-12 {
+    grid-column: span 12;
+  }
+
+  /* 100% (12 of 12 columns) */
 }
 
 /* Global image styling */

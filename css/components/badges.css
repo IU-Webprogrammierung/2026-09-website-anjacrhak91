@@ -31,3 +31,9 @@
         color: var(--color-text-heading);
     }
 }
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}

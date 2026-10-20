@@ -3,11 +3,11 @@
   padding: var(--space-md) var(--space-lg);
   justify-content: center;
   align-items: center;
+  width: 100%;
   border-radius: var(--radius-button);
   box-shadow: var(--shadow-xs);
   transition: transform 0.2s ease-in-out;
 
-  /* Button Text */
   text-align: center;
   color: var(--color-text-on-brand);
   font-family: var(--font-body);
@@ -17,6 +17,7 @@
 
   @media (min-width: 48rem) {
     display: inline-flex;
+    width: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {

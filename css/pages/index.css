@@ -59,3 +59,21 @@
 .card-rail::-webkit-scrollbar {
     display: none;
 }
+
+.story-teaser {
+    padding-block: var(--space-2xl);
+    background-color: var(--color-bg-surface);
+
+    @media (min-width: 64rem) {
+        padding-block: var(--space-3xl);
+    }
+
+    >.subtitle+h2 {
+      margin-block-start: var(--space-sm);
+    }
+
+    >h2+p,
+    >p+.button {
+      margin-block-start: var(--space-lg);
+    }
+}

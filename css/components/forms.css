@@ -5,6 +5,14 @@ form {
     width: 100%;
     gap: var(--space-lg);
 
+    @media (min-width: 48rem) {
+        width: 75%;
+    }
+
+    @media (min-width: 64rem) {
+        width: 100%;
+    }
+
     >fieldset {
         display: flex;
         flex-direction: column;
@@ -32,19 +40,12 @@ form {
 
     >.consent {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto minmax(0, 1fr);
         align-items: center;
         gap: var(--space-sm);
 
         >a {
             grid-column: 1 / -1;
-        }
-
-        @media (min-width: 48rem) {
-            grid-template-columns: max-content max-content max-content;
-            >a {
-                grid-column: auto;
-            }
         }
     }
 }

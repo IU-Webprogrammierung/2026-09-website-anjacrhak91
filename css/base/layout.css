@@ -2,12 +2,18 @@
 body {
   background: var(--color-bg-main);
 }
-
+/* Surface background remains visible behind the rounded content corners */
 main {
   background-color: var(--color-bg-surface);
 }
 
-/* Layout styles for the page content */
+/* Page content layout */
+.page-content,
+.contact-section {
+    border-radius: var(--radius-button) var(--radius-button) 0 0;
+    border-top: 1px solid var(--color-border-subtle);
+}
+
 .page-content {
   display: flex;
   flex-direction: column;
@@ -15,38 +21,58 @@ main {
   padding-block: var(--space-2xl);
   padding-inline: var(--container-inline-padding);
   background-color: var(--color-bg-main);
-  border-radius: var(--radius-button) var(--radius-button) 0 0;
-  border-top: 1px solid var(--color-border-subtle);
 
   @media (min-width: 64rem) {
     padding-block: var(--space-4xl);
     gap: 12rem;
   }
 
+  /* Legal pages use tighter spacing between content cards */
   &.page-content--compact {
     gap: var(--space-xl);
   }
 
+  /* Let the contact background span the page and join the footer without a gap */
   &.page-content--contact-end {
     padding-inline: 0;
     padding-block-end: 0;
 
+    /* Keep regular section content aligned while allowing full-width backgrounds */
     >section:not(.contact-section) {
       padding-inline: var(--container-inline-padding);
     }
   }
 }
 
-/* Styling for contact section attached on footer */
+/* Contact section adjoining the footer */
 .contact-section {
   padding-inline: var(--container-inline-padding);
   padding-block: var(--space-2xl);
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  align-items: start;
+  gap: var(--space-2xl);
+
   background-color: var(--color-bg-surface);
-  border-radius: var(--radius-button) var(--radius-button) 0 0;
-  border-top: 1px solid var(--color-border-subtle);
+
+  >.section-header,
+  >.content-stack {
+    grid-column: 1 / -1;
+  }
 
   @media (min-width: 64rem) {
     padding-block: var(--space-4xl);
+
+    >.section-header,
+    >.content-stack {
+      grid-column: span 6;
+    }
+
+    >.section-header {
+      /* Leave extra space between the introduction and the form */
+      width: 80%;
+    }
   }
 }
 
@@ -147,7 +173,7 @@ picture {
   }
 }
 
-/*Global focus styles for accessibility */
+/* Global focus indicator */
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
@@ -183,8 +209,9 @@ picture {
   background: var(--color-bg-surface);
 }
 
-/* Section header styling*/
+/* Section header layout */
 .section-header {
+
   &,
   >.section-copy {
     >.subtitle+h2 {
@@ -203,12 +230,13 @@ picture {
     align-items: start;
     gap: var(--space-2xl);
 
-    >.section-copy {
+    >.section-copy,
+    >picture {
       grid-column: 1 / -1;
     }
 
     >picture {
-      grid-column: 1 / -1;
+      /* Keep a consistent portrait crop across split section headers */
       aspect-ratio: 9 / 10;
 
       >img {
@@ -221,10 +249,7 @@ picture {
     @media (min-width: 64rem) {
       gap: var(--grid-gutter);
 
-      >.section-copy {
-        grid-column: span 6;
-      }
-
+      >.section-copy,
       >picture {
         grid-column: span 6;
       }

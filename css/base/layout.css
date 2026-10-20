@@ -20,6 +20,7 @@ main {
 
   @media (min-width: 64rem) {
     padding-block: var(--space-4xl);
+    gap: 12rem;
   }
 
   &.page-content--compact {

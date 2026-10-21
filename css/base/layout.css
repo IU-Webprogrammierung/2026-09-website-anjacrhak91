@@ -83,6 +83,7 @@ main {
 
   &.contact-section--plain {
     background-color: var(--color-bg-main);
+
     >.content-stack>.content-card {
       @media (min-width: 48rem) {
         width: 75%;
@@ -268,6 +269,25 @@ picture {
       >picture {
         grid-column: span 6;
       }
+    }
+  }
+}
+
+.social-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
+  li>a {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-sm);
+    text-decoration: underline;
+
+    >svg {
+      border-radius: var(--radius-badge);
+      border: 1px solid var(--color-text-heading);
+      padding: var(--space-xs);
     }
   }
 }

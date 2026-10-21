@@ -22,6 +22,10 @@
         hyphens: auto;
         overflow-wrap: normal;
     }
+
+    a {
+        text-decoration: underline;
+    }
 }
 
 .info-card {
@@ -177,6 +181,7 @@
         >figure+.badge-list {
             margin-block-start: var(--space-lg);
         }
+
         >.badge-list+h3 {
             margin-block-start: var(--space-md);
         }

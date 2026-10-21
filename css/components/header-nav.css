@@ -52,43 +52,87 @@ body {
 
             >nav {
                 /* Hidden on mobile, the hamburger toggle replaces it */
-                display: none;
-                /* Pushes nav and action buttons to the right on desktop */
-                margin-inline-start: auto;
+                display: flex;
+                position: fixed;
+                inset: 0;
+                padding: 20vh 0 var(--space-2xl) var(--space-2xl);
+                align-items: start;
+                justify-content: start;
+                background-color: var(--color-brand-1);
+                overflow-y: auto;
+                z-index: 1;
 
-                @media (min-width: 64rem) {
-                    display: block;
-                }
+                visibility: hidden;
+                pointer-events: none;
 
                 >ul {
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
+                    flex-direction: column;
                     gap: var(--space-xl);
 
                     >li>a {
                         display: inline-block;
-                        /* Transparent border prevents layout shift on hover and current page */
-                        border: 1px solid transparent;
-                        border-radius: var(--radius-button);
                         color: var(--color-text-on-brand);
                         font-weight: var(--fw-semibold);
-                        padding: var(--space-sm) var(--space-md);
+                        font-size: var(--fs-title-5);
 
-                        /* Hover and current page share the same pill style */
-                        &:hover,
                         &[aria-current="page"] {
-                            border-color: var(--color-border-pill);
-                            background: var(--color-bg-pill);
+                            text-decoration: underline;
                         }
                     }
                 }
+
+                @media (min-width: 48rem) {
+                    padding-left: var(--space-4xl);
+                }
+
+                @media (min-width: 64rem) {
+                    display: block;
+                    /* Pushes nav and action buttons to the right on desktop */
+                    margin-inline-start: auto;
+                    position: static;
+                    inset: auto;
+                    background-color: transparent;
+                    overflow-y: visible;
+                    z-index: auto;
+                    visibility: visible;
+                    pointer-events: auto;
+                    padding: 0;
+
+
+                    >ul {
+                        flex-direction: row;
+                        align-items: center;
+
+                        >li>a {
+                            /* Transparent border prevents layout shift on hover and current page */
+                            border: 1px solid transparent;
+                            border-radius: var(--radius-button);
+                            padding: var(--space-sm) var(--space-md);
+                            font-size: var(--fs-body);
+
+                            /* Hover and current page share the same pill style */
+                            &:hover,
+                            &[aria-current="page"] {
+                                border-color: var(--color-border-pill);
+                                background: var(--color-bg-pill);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:has(.hamburger-toggle[aria-expanded="true"])>nav {
+                visibility: visible;
+                pointer-events: auto;
             }
 
             >.action-buttons {
                 display: flex;
                 gap: var(--space-lg);
                 align-items: center;
+                position: relative;
 
                 >.theme-toggle {
                     /* Minimum touch target size */
@@ -107,6 +151,7 @@ body {
                 }
 
                 >.hamburger-toggle {
+                    z-index: 2;
                     /* Minimum touch target size */
                     min-height: 44px;
                     min-width: 44px;
@@ -143,6 +188,29 @@ body {
 
                         &::after {
                             bottom: -12px;
+                        }
+
+                        @media (prefers-reduced-motion: no-preference) {
+                            transition: background-color 0.2s ease;
+
+                            &::before,
+                            &::after {
+                                transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+                            }
+                        }
+                    }
+
+                    &[aria-expanded="true"]>.hamburger-toggle-icon {
+                        background-color: transparent;
+
+                        &::before {
+                            top: 0;
+                            transform: rotate(45deg);
+                        }
+
+                        &::after {
+                            bottom: 0;
+                            transform: rotate(-45deg);
                         }
                     }
                 }

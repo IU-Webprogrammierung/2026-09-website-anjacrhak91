@@ -38,16 +38,16 @@
 
     /* Add responsive layout for larger screens */
     @media (min-width: 80rem) {
-    > aside {
-        flex-direction: column;
-        align-items: flex-start;
-        grid-column: span 5;
-    }
+        >aside {
+            flex-direction: column;
+            align-items: flex-start;
+            grid-column: span 5;
+        }
 
-    > article {
-        grid-column: span 7;
+        >article {
+            grid-column: span 7;
+        }
     }
-}
 
 }
 

@@ -9,6 +9,7 @@
             grid-template-columns: auto minmax(0, 1fr) auto;
             gap: var(--space-md, 16px);
             align-items: center;
+            cursor: pointer;
 
             >.timeline-step {
                 color: var(--color-brand-1);
@@ -55,7 +56,8 @@
                 margin-block-start: var(--space-lg);
             }
 
-            >h4+ul {
+            >h4+ul,
+            >h3+p {
                 margin-block-start: var(--space-md);
             }
 
@@ -81,5 +83,78 @@
 
         }
 
+    }
+
+    &.timeline--culinary {
+        >li>details>article>ul {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--space-xl);
+            list-style: none;
+            padding-inline-start: 0;
+
+            @media (min-width: 48rem) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            @media (min-width: 64rem) {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            >li+li {
+                margin-block-start: 0;
+            }
+        }
+
+        .timeline-content--split {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            align-items: start;
+
+            >ul {
+                grid-column: 1 / -1;
+            }
+
+            >figure>figcaption {
+                font-style: italic;
+                font-size: var(--fs-m);
+            }
+
+            >div>h3+p,
+            >figure>picture+figcaption {
+                margin-block-start: var(--space-md);
+            }
+
+            @media (min-width: 48rem) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                >div {
+                    grid-column: 1 / -1;
+                }
+                >figure:only-of-type {
+                    grid-column: 1 / -1;
+                }
+            }
+
+
+            @media (min-width: 64rem) {
+                grid-template-columns: repeat(var(--grid-columns), 1fr);
+
+                >div {
+                    grid-column: span 6;
+                }
+
+                >figure {
+                    grid-column: span 3;
+                }
+
+                >figure:only-of-type {
+                    grid-column: span 6;
+                }
+            }
+
+
+        }
     }
 }

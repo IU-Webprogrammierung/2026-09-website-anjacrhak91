@@ -1,7 +1,13 @@
+html {
+  /* Keep anchor targets below the sticky site header */
+  scroll-padding-block-start: 9rem;
+}
+
 /* Page surfaces */
 body {
   background: var(--color-bg-main);
 }
+
 /* Surface background remains visible behind the rounded content corners */
 main {
   background-color: var(--color-bg-surface);
@@ -10,8 +16,8 @@ main {
 /* Page content layout */
 .page-content,
 .contact-section {
-    border-radius: var(--radius-button) var(--radius-button) 0 0;
-    border-top: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-button) var(--radius-button) 0 0;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .page-content {

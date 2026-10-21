@@ -30,7 +30,7 @@
   /* Responsive roles, mobile values */
   --fs-body: var(--fs-m);
   --fs-subtitle: var(--fs-s);
-  --fs-timeline-title: var(--fs-m);
+  --fs-timeline-title: var(--fs-l);
 
   /* Spacing */
   --space-xs: 0.25rem;

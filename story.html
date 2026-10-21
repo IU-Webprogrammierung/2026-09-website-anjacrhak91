@@ -12,7 +12,8 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/pages/story.css">
+    
     <script src="script/loader.js" defer></script>
 </head>
 
@@ -35,8 +36,40 @@
             </header>
         </section>
 
-        <div class="page-content page-content--compact">
-            <article class="story-article">
+        <div class="page-content story-layout">
+            <aside aria-label="Autorin und Inhaltsverzeichnis">
+                <figure>
+                    <picture>
+                        <source srcset="assets/images/portraits/anja-crhak-portrait-hellgruener-blazer.avif"
+                            type="image/avif">
+                        <img src="assets/images/portraits/anja-crhak-portrait-hellgruener-blazer.webp"
+                            alt="Porträt von Anja Crhak in einem hellgrünen Blazer." decoding="async">
+                    </picture>
+                    <figcaption>
+                        <span class="title-6 title-6--body">Anja Crhak</span>
+                        <p>Von der Lehrerin in Deutschland zur Medieninformatikerin in Schweden</p>
+                    </figcaption>
+                </figure>
+
+                <nav aria-label="Inhaltsverzeichnis der Story">
+                    <p class="title-5">Inhaltsverzeichnis</p>
+                    <ul>
+                        <li><a class="body-l body-l--semibold" href="#turnverein-klassenzimmer">Vom Turnverein ins
+                                Klassenzimmer</a></li>
+                        <li><a class="body-l body-l--semibold" href="#klassenzimmer-schul-it">Klassenzimmer, Schul-IT
+                                und erste Schritte im Webdesign</a>
+                        </li>
+                        <li><a class="body-l body-l--semibold" href="#neuanfang-in-schweden">Neuanfang in Schweden: Der
+                                Wechsel in die Medieninformatik</a>
+                        </li>
+                        <li><a class="body-l body-l--semibold" href="#e-commerce-projekt">Vom Theorie-Wissen zum
+                                E-Commerce-Projekt</a></li>
+                        <li><a class="body-l body-l--semibold" href="#blick-nach-vorn">Der Blick nach vorn</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <article class="section-stack">
                 <section class="content-card" id="turnverein-klassenzimmer">
                     <p class="subtitle">
                         <time datetime="2011">2011</time>–<time datetime="2018">2018</time>
@@ -110,38 +143,7 @@
                 </section>
             </article>
 
-            <aside class="story-sidebar" aria-label="Autorin und Inhaltsverzeichnis">
-                <figure>
-                    <picture>
-                        <source srcset="assets/images/portraits/anja-crhak-portrait-hellgruener-blazer.avif"
-                            type="image/avif">
-                        <img src="assets/images/portraits/anja-crhak-portrait-hellgruener-blazer.webp"
-                            alt="Porträt von Anja Crhak in einem hellgrünen Blazer." decoding="async">
-                    </picture>
-                    <figcaption>
-                        <span class="title-6 title-6--body">Anja Crhak</span>
-                        <p>Von der Lehrerin in Deutschland zur Medieninformatikerin in Schweden</p>
-                    </figcaption>
-                </figure>
 
-                <nav aria-label="Inhaltsverzeichnis der Story">
-                    <p class="title-5">Inhaltsverzeichnis</p>
-                    <ul>
-                        <li><a class="body-l body-l--semibold" href="#turnverein-klassenzimmer">Vom Turnverein ins
-                                Klassenzimmer</a></li>
-                        <li><a class="body-l body-l--semibold" href="#klassenzimmer-schul-it">Klassenzimmer, Schul-IT
-                                und erste Schritte im Webdesign</a>
-                        </li>
-                        <li><a class="body-l body-l--semibold" href="#neuanfang-in-schweden">Neuanfang in Schweden: Der
-                                Wechsel in die Medieninformatik</a>
-                        </li>
-                        <li><a class="body-l body-l--semibold" href="#e-commerce-projekt">Vom Theorie-Wissen zum
-                                E-Commerce-Projekt</a></li>
-                        <li><a class="body-l body-l--semibold" href="#blick-nach-vorn">Der Blick nach vorn</a></li>
-                    </ul>
-                </nav>
-
-            </aside>
         </div>
     </main>
 

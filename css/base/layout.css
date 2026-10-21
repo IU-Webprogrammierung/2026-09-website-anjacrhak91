@@ -273,7 +273,8 @@ picture {
   }
 }
 
-.social-link-list {
+/*Global link list styling */
+.link-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
@@ -282,12 +283,17 @@ picture {
     display: flex;
     flex-direction: row;
     gap: var(--space-sm);
-    text-decoration: underline;
 
     >svg {
       border-radius: var(--radius-badge);
       border: 1px solid var(--color-text-heading);
       padding: var(--space-xs);
+    }
+  }
+
+  &.link-list--social {
+    >li>a {
+      text-decoration: underline;
     }
   }
 }

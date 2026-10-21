@@ -1,4 +1,5 @@
 .legal-card {
+
     /* list styling */
     ul {
         list-style: disc;
@@ -10,8 +11,21 @@
     }
 
     /* margin-styling */
-    >h2+p,
+    >h2+p {
+        margin-block-start: var(--space-lg);
+    }
     >h3+p {
         margin-block-start: var(--space-md);
+    }
+
+}
+
+.section-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+
+    @media (min-width: 64rem) {
+        grid-template-columns: 1fr 1fr;
     }
 }

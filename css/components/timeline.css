@@ -32,6 +32,53 @@
 
         >details>article {
             padding-block: var(--space-md);
+
+            >.timeline-meta {
+                >div+div {
+                    margin-block-start: var(--space-sm);
+                }
+
+                >div {
+
+                    >dt,
+                    >dd {
+                        display: inline;
+                    }
+
+                    >dt::after {
+                        content: ": ";
+                    }
+                }
+            }
+
+            >.timeline-meta+h4 {
+                margin-block-start: var(--space-lg);
+            }
+
+            >h4+ul {
+                margin-block-start: var(--space-md);
+            }
+
+            >ul+h4 {
+                margin-block-start: var(--space-lg);
+            }
+
+            >ul {
+                list-style: disc;
+                padding-inline-start: var(--space-lg);
+
+                >li+li {
+                    margin-block-start: var(--space-sm);
+                }
+
+                >li {
+                    &::marker {
+                        color: var(--color-text-heading);
+                    }
+
+                }
+            }
+
         }
 
     }

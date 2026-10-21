@@ -80,6 +80,15 @@ main {
       width: 80%;
     }
   }
+
+  &.contact-section--plain {
+    background-color: var(--color-bg-main);
+    >.content-stack>.content-card {
+      @media (min-width: 48rem) {
+        width: 75%;
+      }
+    }
+  }
 }
 
 .section-stack {

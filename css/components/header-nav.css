@@ -148,6 +148,19 @@ body {
                         background-color: var(--color-text-on-brand);
                         color: var(--color-brand-1);
                     }
+
+                    .theme-icon--sun {
+                        display: none;
+                    }
+
+                    html[data-theme="dark"] & {
+                        .theme-icon--sun {
+                            display: block;
+                        }
+                        .theme-icon--moon {
+                            display: none;
+                        }
+                    }
                 }
 
                 >.hamburger-toggle {

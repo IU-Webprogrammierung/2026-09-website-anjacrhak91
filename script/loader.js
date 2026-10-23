@@ -11,6 +11,7 @@ async function loadComponent(selector, path) {
     element.innerHTML = html;
 
     if (selector === 'header') {
+        initThemeToggle();
         const button = element.querySelector('.hamburger-toggle');
         const navigation = element.querySelector('#site-nav-menu');
 

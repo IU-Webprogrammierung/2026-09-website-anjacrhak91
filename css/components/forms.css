@@ -19,10 +19,6 @@ form {
         gap: var(--space-sm);
         width: 100%;
 
-        .required-asterisk {
-            color: var(--color-brand-2);
-        }
-
         >input:not([type="checkbox"]),
         >textarea {
             padding: var(--space-md);

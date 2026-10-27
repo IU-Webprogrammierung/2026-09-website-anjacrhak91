@@ -138,6 +138,10 @@ body {
   line-height: var(--lh-ui);
   text-decoration: underline;
   color: var(--color-text-heading);
+
+  &:hover {
+    color: var(--color-brand-1);
+  }
 }
 
 .link-m { font-size: var(--fs-m); }

@@ -26,12 +26,11 @@ form {
             border: 1px solid var(--color-border-subtle);
             background: var(--color-bg-main);
         }
+    }
 
-        >input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-        }
-
+    >.consent>input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
     }
 
     >.consent {

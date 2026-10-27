@@ -1,6 +1,7 @@
 .hero {
     display: block;
-    padding-block: var(--space-2xl);
+    padding-top: var(--space-3xl);
+    padding-block-end: var(--space-2xl);
     padding-inline: var(--container-inline-padding);
 
     >header {
@@ -25,7 +26,7 @@
     }
 
     @media (min-width: 64rem) {
-        padding-block: var(--space-4xl);
+        padding-block: 8rem;
     }
 
     &.hero--split {

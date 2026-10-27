@@ -224,3 +224,14 @@ picture {
     }
   }
 }
+
+/* Shared card grid defaults; page-specific styles define responsive columns and spacing */
+.recipe-grid,
+.projects-grid,
+.tool-grid,
+.competence-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--grid-gutter);
+  row-gap: var(--space-2xl);
+}

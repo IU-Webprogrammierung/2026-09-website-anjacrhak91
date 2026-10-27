@@ -66,5 +66,15 @@
             }
         }
     }
+}
 
+@media (prefers-reduced-motion: no-preference) {
+    .hero > picture {
+        animation: hero-fade-in 0.7s ease-out;
+    }
+
+    @keyframes hero-fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 }

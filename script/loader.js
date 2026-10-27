@@ -12,6 +12,7 @@ async function loadComponent(selector, path) {
 
     if (selector === 'header') {
         initThemeToggle();
+        initHeaderScroll(element);
         const button = element.querySelector('.hamburger-toggle');
         const navigation = element.querySelector('#site-nav-menu');
 
@@ -55,4 +56,22 @@ async function loadComponent(selector, path) {
             link.removeAttribute('aria-current');
         }
     });
+}
+
+// Make the header background transparent when scrolled past its height.
+function initHeaderScroll(header) {
+    function updateHeaderBackground() {
+        header.classList.toggle(
+            'is-scrolled',
+            window.scrollY > header.offsetHeight * 0.9
+        );
+    }
+
+    window.addEventListener('scroll', updateHeaderBackground, {
+        passive: true
+    });
+
+    window.addEventListener('resize', updateHeaderBackground);
+
+    updateHeaderBackground();
 }

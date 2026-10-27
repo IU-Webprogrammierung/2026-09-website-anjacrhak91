@@ -27,7 +27,7 @@ body {
             gap: var(--space-3xl);
 
             border-radius: var(--radius-badge);
-            background-color: var(--color-brand-1);
+            background-color: var(--color-brand-primary);
 
             /* Keep the focus outline dark against the olive navbar in both themes */
             :focus-visible {
@@ -62,7 +62,7 @@ body {
                 padding: 20vh 0 var(--space-2xl) var(--space-2xl);
                 align-items: start;
                 justify-content: start;
-                background-color: var(--color-brand-1);
+                background-color: var(--color-brand-primary);
                 overflow-y: auto;
                 z-index: 1;
 
@@ -150,7 +150,7 @@ body {
                     /* Button States */
                     &:hover {
                         background-color: var(--color-text-on-brand);
-                        color: var(--color-brand-1);
+                        color: var(--color-brand-primary);
                     }
 
                     .theme-icon--sun {

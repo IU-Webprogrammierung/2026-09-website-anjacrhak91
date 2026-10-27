@@ -92,7 +92,7 @@ body {
             justify-content: center;
             width: 3rem;
             height: 3rem;
-            background-color: var(--color-brand-1);
+            background-color: var(--color-brand-primary);
             border-radius: var(--radius-badge);
             box-shadow: var(--shadow-md);
             transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
@@ -111,7 +111,7 @@ body {
             }
 
             &:hover {
-                background-color: var(--color-brand-2);
+                background-color: var(--color-brand-secondary);
                 transform: translateY(-2px);
             }
 

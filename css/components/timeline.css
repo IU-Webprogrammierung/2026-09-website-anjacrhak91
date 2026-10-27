@@ -12,7 +12,7 @@
             cursor: pointer;
 
             >.timeline-step {
-                color: var(--color-brand-1);
+                color: var(--color-brand-primary);
             }
 
             &::after {

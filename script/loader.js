@@ -40,6 +40,11 @@ async function loadComponent(selector, path) {
         });
     }
 
+    if (selector === 'footer') {
+        initScrollToTop(element);
+    }
+
+
     // Highlight the current page link in the header and footer navigation.
     const currentPath = window.location.pathname.replace(/\/$/, '/index.html');
 
@@ -74,4 +79,24 @@ function initHeaderScroll(header) {
     window.addEventListener('resize', updateHeaderBackground);
 
     updateHeaderBackground();
+}
+
+// Show the scroll-to-top link after scrolling past one viewport height.
+function initScrollToTop(footer) {
+    const scrollToTop = footer.querySelector('.scroll-to-top');
+
+    function updateScrollToTopVisibility() {
+        scrollToTop.classList.toggle(
+            'is-visible',
+            window.scrollY > window.innerHeight * 0.5
+        );
+    }
+
+    window.addEventListener('scroll', updateScrollToTopVisibility, {
+        passive: true
+    });
+
+    window.addEventListener('resize', updateScrollToTopVisibility);
+
+    updateScrollToTopVisibility();
 }

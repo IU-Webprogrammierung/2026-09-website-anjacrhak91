@@ -23,7 +23,7 @@
 .section-split {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
 
     @media (min-width: 64rem) {
         grid-template-columns: 1fr 1fr;

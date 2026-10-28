@@ -35,7 +35,7 @@ main {
 
   /* Legal pages use tighter spacing between content cards */
   &.page-content--compact {
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
   }
 
   /* Let the contact background span the page and join the footer without a gap */
@@ -105,6 +105,69 @@ main {
 
   @media (min-width: 48rem) {
     gap: var(--space-lg);
+  }
+}
+
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  align-items: start;
+  gap: var(--space-2xl);
+
+  >aside,
+  >article {
+    grid-column: 1 / -1;
+  }
+
+  >aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+
+    >nav {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+
+      >p {
+        padding: var(--space-md, 16px);
+        border-radius: var(--radius-card);
+        background: var(--color-brand-primary);
+      }
+
+      >ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+
+        >li {
+          padding: var(--space-sm) var(--space-md);
+          border-left: 4px solid var(--color-brand-primary);
+
+          &:hover {
+            border-radius: 0 var(--radius-card) var(--radius-card) 0;
+            background-color: var(--color-bg-surface);
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    gap: var(--grid-gutter);
+
+    >aside {
+      grid-column: 9 / 13;
+      grid-row: 1;
+      position: sticky;
+      top: 9rem;
+    }
+
+    >article {
+      grid-column: 1 / 9;
+      grid-row: 1;
+    }
   }
 }
 

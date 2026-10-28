@@ -17,6 +17,7 @@ Ziel ist die Entwicklung einer modernen, responsiven Portfolio-Website, die den 
 - [Designkonzept: Wireframes & Figma-Prototypen](#designkonzept-wireframes--figma-prototypen)
 - [Barrierefreiheit](#barrierefreiheit)
 - [Technologien)](#technologien)
+- [JavaScript: Aufbau & Funktionen](#javascript-aufbau--funktionen)
 - [Repository-Organisation & Versionskontrolle](#repository-organisation--versionskontrolle)
 - [Commit-Tags & Abgabe-Phasen](#commit-tags--abgabe-phasen)
 - [Eingesetzte und geplante Funktionalitäten](#eingesetzte-und-geplante-funktionalitäten)
@@ -101,6 +102,27 @@ Die HTML-Dateien sind nach Standards der digitalen Barrierefreiheit (WCAG 2.1 Le
 | **JavaScript (Vanilla JS)** | Phase 2–3 | Interaktive UI-Steuerung (Hamburger-Menü, Dark-Mode-Toggle, evtl. Sprach-Toggle) |
 | **Git & GitHub** | Phase 1–3 | Versionskontrolle, Commit-Historie, Tagging der Phasen & Code-Repository |
 | **Webfonts / Google Fonts (Self-Hosted)** | Phase 2 | Lokale Einbindung im Repository |
+
+## JavaScript: Aufbau & Funktionen
+
+Die interaktiven Funktionen sind in zwei Vanilla-JavaScript-Dateien im Verzeichnis `script/` aufgeteilt:
+
+### `theme.js`
+
+* Setzt das Farbschema bereits beim Laden der Seite.
+* Stellt die gespeicherte Auswahl aus `localStorage` wieder her; ohne gespeicherte Auswahl wird der Hellmodus verwendet.
+* Initialisiert den Theme-Toggle nach dem Laden des Headers und aktualisiert dessen `aria-pressed`-Zustand.
+
+### `loader.js`
+
+* Lädt `components/header.html` und `components/footer.html` über `fetch()` und fügt sie in die dafür vorgesehenen Bereiche der Seiten ein.
+* Initialisiert das Hamburger-Menü einschließlich ARIA-Zustand, Fokussteuerung und Schließen mit Escape.
+* Markiert den Link zur aktuellen Seite mit `aria-current="page"`.
+* Passt den Header beim Scrollen an und blendet den Back-to-Top-Link nach einer halben Viewporthöhe ein.
+
+### Einbindung
+
+`theme.js` wird früh im `<head>` geladen, damit das gespeicherte Farbschema möglichst vor der Darstellung gesetzt wird. `loader.js` wird mit `defer` eingebunden und nach dem Einlesen des HTML ausgeführt.
 
 ## Repository-Organisation & Versionskontrolle
 

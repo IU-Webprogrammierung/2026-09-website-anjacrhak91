@@ -6,18 +6,21 @@
 
 Dieses Projekt entsteht im Rahmen des Fernstudiums an der **IU Internationalen Hochschule** im Studiengang **Medieninformatik (B.Sc.)** für den Kurs **Projekt: Web-Programmierung (DLBUXPWP01)** innerhalb eines Creative Labs.
 
-Ziel ist die Entwicklung einer modernen, responsiven Portfolio-Website, die den beruflichen Werdegang von Anja Crhak (von der Realschullehrerin zur Medieninformatikerin & Webentwicklerin), ausgewählte Web- und E-Commerce-Projekte sowie kulinarische Inhalte (Foodblog „Bauchgefühl Rezepte“ & ZDF Küchenschlacht) anschaulich und modern darstellt. Der Fokus liegt dabei konsequent auf **Barrierefreiheit (Accessibility)**, **Responsive Design** und einer **nutzerzentrierten Informationsarchitektur**. Dabei wird der Content-First und Mobile-First-Ansatz verfolgt. 
+Ziel ist die Entwicklung einer modernen, responsiven Portfolio-Website, die den beruflichen Werdegang von Anja Crhak (von der Realschullehrerin zur Medieninformatikerin & Webentwicklerin), ausgewählte Web- und E-Commerce-Projekte sowie kulinarische Inhalte (Foodblog „Bauchgefühl Rezepte“ & ZDF Küchenschlacht) anschaulich und modern darstellt. Der Fokus liegt dabei konsequent auf **Barrierefreiheit (Accessibility)**, **Responsive Design** und einer **nutzerzentrierten Informationsarchitektur**. Dabei wird der Content-First und Mobile-First-Ansatz verfolgt.
+
+**[Live-Preview der Website ansehen](https://iu-webprogrammierung.github.io/2026-09-website-anjacrhak91/)**
 
 ## Inhaltsverzeichnis
 
 - [Seitenstruktur & geplante Inhalte](#seitenstruktur--geplante-inhalte)
 - [Responsive Design](#responsive-design--breakpoint-konzept)
-- [Design-Entwürfe](#design-entwürfe-figma-prototyping)
+- [Designkonzept: Wireframes & Figma-Prototypen](#designkonzept-wireframes--figma-prototypen)
 - [Barrierefreiheit](#barrierefreiheit)
 - [Technologien)](#technologien)
 - [Repository-Organisation & Versionskontrolle](#repository-organisation--versionskontrolle)
 - [Commit-Tags & Abgabe-Phasen](#commit-tags--abgabe-phasen)
 - [Eingesetzte und geplante Funktionalitäten](#eingesetzte-und-geplante-funktionalitäten)
+- [Testing & Qualitätssicherung](#testing--qualitätssicherung)
 - [Autor](#autor)
 
 ## Seitenstruktur & geplante Inhalte
@@ -61,12 +64,14 @@ Die Website folgt dem Mobile-First-Ansatz: Das Basislayout wird über drei Haupt
   * *Mobile/Tablet:* 1-spaltiges-Layout; auf Seite “Kulinarik” ist ergänzender Bildbereich komplett ausgeblendet
   * *Desktop:* Sticky Sidebar, Reihenfolge mit CSS vertauscht (Anordnung rechts)
 
-## Design-Entwürfe (Figma Prototyping)
+## Designkonzept: Wireframes & Figma-Prototypen
 
-Zur visuellen und strukturellen Planung wurden alle Screens in **Figma** für drei Gerätegrößen (Mobile, Tablet, Desktop) ausgearbeitet:
-* Layout-Raster & Spaltenaufteilung
-* Typografie, Farben & Abstände
-* Responsive Verhaltensmuster der Komponenten
+Zur Planung der Website wurden Wireframes erstellt, um die Seitenstruktur, die Anordnung der Inhalte und die Nutzerführung festzulegen. Darauf aufbauend wurden in Figma Design-Entwürfe für Mobile, Tablet und Desktop ausgearbeitet.
+
+Die Entwürfe berücksichtigen:
+* Layout-Raster und Spaltenaufteilung
+* Typografie, Farben und Abstände
+* Responsives Verhalten der Komponenten
 
 ## Barrierefreiheit 
 
@@ -154,6 +159,42 @@ In **Phase 1** wurden die semantische HTML-Struktur und die Ressourcen vorbereit
 | **Skip-to-Content-Link** | Phase 1–2 | Bei Tastaturfokus sichtbar; direkter Sprung zum Hauptinhalt umgesetzt. |
 | **Back-to-Top-Link** | Phase 1–3 | Scrollabhängige Einblendung und sanftes Zurückscrollen umgesetzt; reduzierte Bewegung berücksichtigt. |
 | **Mehrsprachigkeit** | Phase 3 | Optional vorgesehen; bislang nicht implementiert. |
+
+## Testing & Qualitätssicherung
+
+Die Website ist für Google Chrome optimiert. Barrierefreiheit und responsives Verhalten wurden während der Entwicklung fortlaufend überprüft.
+
+### Testmethoden
+
+* **Chrome DevTools:** Prüfung des Layouts und der Navigation bei unterschiedlichen Viewportgrößen.
+* **Lighthouse:** Automatisierte Prüfung, unter anderem der Kategorien Barrierefreiheit und Best Practices.
+* **WAVE:** Prüfung auf mögliche Barrierefreiheitsprobleme.
+* **Hell- und Dunkelmodus:** Prüfung der Darstellung und Farbkontraste in beiden Farbschemata.
+
+### Testergebnisse
+
+**Testdatum:** 28.10.2026  
+**Browser:** Google Chrome 156.0.8078.48
+
+#### Lighthouse
+
+| Seite | Ansicht | Barrierefreiheit | Best Practices |
+| :--- | :--- | :--- | :--- |
+| index.html | Desktop | 100/100 | 100/100 |
+| index.html | Mobil | 100/100 | 100/100 |
+| karriere.html | Desktop | 100/100 | 100/100 |
+| karriere.html | Mobil | 100/100 | 100/100 |
+
+#### WAVE
+
+| Seite | Fehler | Kontrastfehler | Hinweise | AIM Score |
+| :--- | :--- | :--- | :--- | :--- |
+| index.html | 0 | 0 | 0 | 10/10 |
+| karriere.html | 0 | 0 | 0 | 10/10 |
+| projekte.html | 0 | 0 | 0 | 10/10 |
+| story.html | 0 | 0 | 0 | 10/10 |
+
+Die WAVE-Prüfung wurde für jede aufgeführte Seite sowohl im Hell- als auch im Dunkelmodus durchgeführt. Automatisierte Tests erkennen nicht alle Barrierefreiheitsprobleme. Ergänzend werden insbesondere Tastaturbedienung, Fokusreihenfolge und die Verständlichkeit von Inhalten manuell geprüft.
 
 ## Autor
 **Anja Crhak**  

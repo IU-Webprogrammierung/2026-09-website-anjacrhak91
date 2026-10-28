@@ -263,7 +263,7 @@ picture {
   }
 }
 
-/*Global link list styling */
+/* Global link list styling */
 .link-list {
   display: flex;
   flex-direction: column;

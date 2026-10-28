@@ -1,31 +1,29 @@
 .legal-card {
 
-    /* list styling */
-    ul {
-        list-style: disc;
-        padding-inline-start: var(--space-xl);
-    }
+  ul {
+    list-style: disc;
+    padding-inline-start: var(--space-xl);
+  }
 
-    li+li {
-        margin-block-start: var(--space-xs);
-    }
+  li+li {
+    margin-block-start: var(--space-xs);
+  }
 
-    /* margin-styling */
-    >h2+p {
-        margin-block-start: var(--space-lg);
-    }
-    >h3+p {
-        margin-block-start: var(--space-md);
-    }
+  >h2+p {
+    margin-block-start: var(--space-lg);
+  }
+  >h3+p {
+    margin-block-start: var(--space-md);
+  }
 
 }
 
 .section-split {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
 
-    @media (min-width: 64rem) {
-        grid-template-columns: 1fr 1fr;
-    }
+  @media (min-width: 64rem) {
+    grid-template-columns: 1fr 1fr;
+  }
 }

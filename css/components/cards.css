@@ -1,8 +1,8 @@
 .content-card {
     display: block;
     padding: var(--space-xl);
-    border-radius: var(--radius-card);
     border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
     background: var(--color-bg-surface);
 
     >*+* {
@@ -33,8 +33,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: var(--space-md);
-    border-radius: var(--radius-card);
     border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-card);
     background: var(--color-bg-surface);
 
     >.badge+:is(h3, h4),
@@ -53,8 +53,8 @@
         display: grid;
         aspect-ratio: 1;
         padding: var(--space-md);
-        border-radius: var(--radius-card);
         border: 1px solid var(--color-border-subtle);
+        border-radius: var(--radius-card);
         background: var(--color-bg-surface);
 
         >img,
@@ -63,9 +63,9 @@
         }
 
         >.badge {
+            z-index: 1;
             justify-self: start;
             align-self: start;
-            z-index: 1;
         }
 
         >img {
@@ -79,7 +79,7 @@
                 width: 85%;
                 height: 85%;
             }
-        }
+    }
     }
 
     >figure+h3 {
@@ -109,9 +109,9 @@
         }
 
         >.badge {
+            z-index: 1;
             justify-self: start;
             align-self: start;
-            z-index: 1;
             margin: var(--space-md);
         }
 
@@ -123,7 +123,7 @@
                 height: 100%;
                 object-fit: cover;
             }
-        }
+    }
     }
 
     &.project-card--detailed {
@@ -135,7 +135,7 @@
 
         >.project-description+.link-m {
             margin-block-start: var(--space-sm);
-        }
+    }
     }
 }
 
@@ -151,9 +151,9 @@
 
         >.badge,
         >.badge-list {
+            z-index: 1;
             justify-self: start;
             align-self: start;
-            z-index: 1;
             margin: var(--space-md);
         }
 
@@ -165,7 +165,7 @@
                 height: 100%;
                 object-fit: cover;
             }
-        }
+    }
     }
 
     >figure+h3 {
@@ -184,6 +184,6 @@
 
         >.badge-list+h3 {
             margin-block-start: var(--space-md);
-        }
+    }
     }
 }

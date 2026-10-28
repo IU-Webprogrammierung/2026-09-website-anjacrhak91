@@ -1,18 +1,17 @@
 .sidebar-layout {
-    >aside>figure {
-        >picture+figcaption {
-            margin-block-start: var(--space-xl);
-        }
-
-        >picture {
-            /* Keep a consistent portrait crop across split section headers */
-            aspect-ratio: 1;
-
-            >img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
+  >aside>figure {
+    >picture+figcaption {
+      margin-block-start: var(--space-xl);
     }
+
+    >picture {
+      aspect-ratio: 1;
+
+      >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }

@@ -7,8 +7,8 @@
         >details>summary {
             display: grid;
             grid-template-columns: auto minmax(0, 1fr) auto;
-            gap: var(--space-md, 16px);
             align-items: center;
+            gap: var(--space-md, 16px);
             cursor: pointer;
 
             >.timeline-step {
@@ -21,6 +21,7 @@
                 height: 1.5rem;
                 justify-self: end;
                 color: var(--color-text-heading);
+                /* Draw the disclosure plus from two strokes; the open state rotates it. */
                 background:
                     linear-gradient(currentColor, currentColor) center / 100% 3px no-repeat,
                     linear-gradient(currentColor, currentColor) center / 3px 100% no-repeat;
@@ -40,7 +41,6 @@
                 }
 
                 >div {
-
                     >dt,
                     >dd {
                         display: inline;
@@ -77,12 +77,9 @@
                     &::marker {
                         color: var(--color-text-heading);
                     }
-
                 }
             }
-
         }
-
     }
 
     &.timeline--culinary {
@@ -93,6 +90,10 @@
             list-style: none;
             padding-inline-start: 0;
 
+            >li+li {
+                margin-block-start: 0;
+            }
+
             @media (min-width: 48rem) {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -100,25 +101,21 @@
             @media (min-width: 64rem) {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
             }
-
-            >li+li {
-                margin-block-start: 0;
-            }
         }
 
         .timeline-content--split {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--space-xl);
             align-items: start;
+            gap: var(--space-xl);
 
             >ul {
                 grid-column: 1 / -1;
             }
 
             >figure>figcaption {
-                font-style: italic;
                 font-size: var(--fs-m);
+                font-style: italic;
             }
 
             >div>h3+p,
@@ -129,14 +126,11 @@
             @media (min-width: 48rem) {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
 
-                >div {
-                    grid-column: 1 / -1;
-                }
+                >div,
                 >figure:only-of-type {
                     grid-column: 1 / -1;
                 }
             }
-
 
             @media (min-width: 64rem) {
                 grid-template-columns: repeat(var(--grid-columns), 1fr);
@@ -153,8 +147,6 @@
                     grid-column: span 6;
                 }
             }
-
-
         }
     }
 }

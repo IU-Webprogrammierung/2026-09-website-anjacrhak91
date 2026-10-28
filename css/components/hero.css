@@ -1,80 +1,79 @@
 .hero {
-    display: block;
-    padding-top: var(--space-3xl);
-    padding-block-end: var(--space-2xl);
-    padding-inline: var(--container-inline-padding);
+  display: block;
+  padding-top: var(--space-3xl);
+  padding-block-end: var(--space-2xl);
+  padding-inline: var(--container-inline-padding);
+
+  >header {
+
+    >p+h1 {
+      margin-block-start: var(--space-sm);
+    }
+
+    >h1+p {
+      margin-block-start: var(--space-lg);
+      max-width: 80ch;
+    }
+
+    >p+.button-group {
+      margin-block-start: var(--space-xl);
+    }
+
+    >h1 {
+      max-width: 30ch;
+      text-wrap: balance;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    padding-block: 8rem;
+  }
+
+  &.hero--split {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    align-items: center;
+    gap: var(--space-2xl);
+
+    >picture {
+      grid-column: 1 / -1;
+    }
 
     >header {
-
-        >p+h1 {
-            margin-block-start: var(--space-sm);
-        }
-
-        >h1+p {
-            margin-block-start: var(--space-lg);
-            max-width: 80ch;
-        }
-
-        >p+.button-group {
-            margin-block-start: var(--space-xl);
-        }
-
-        >h1 {
-            max-width: 30ch;
-            text-wrap: balance;
-        }
+      grid-column: 1 / -1;
     }
-
     @media (min-width: 64rem) {
-        padding-block: 8rem;
+      gap: var(--grid-gutter);
+
+      >picture {
+        grid-column: span 5;
+      }
+
+      >header {
+        grid-column: span 7;
+      }
     }
 
-    &.hero--split {
-        display: grid;
-        grid-template-columns: repeat(var(--grid-columns), 1fr);
-        align-items: center;
-        gap: var(--space-2xl);
+    @media (min-width: 73rem) {
 
-        >picture {
-            grid-column: 1 / -1;
-        }
+      >picture {
+        grid-column: span 6;
+      }
 
-        >header {
-            grid-column: 1 / -1;
-        }
-        /* additional breakpoint prevents buttons in the hero section from wrapping */
-        @media (min-width: 64rem) {
-            gap: var(--grid-gutter);
-
-            >picture {
-                grid-column: span 5;
-            }
-
-            >header {
-                grid-column: span 7;
-            }
-        }
-
-        @media (min-width: 73rem) {
-
-            >picture {
-                grid-column: span 6;
-            }
-
-            >header {
-                grid-column: span 6;
-            }
-        }
+      >header {
+        grid-column: span 6;
+      }
     }
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .hero > picture {
-        animation: hero-fade-in 0.7s ease-out;
-    }
+  .hero > picture {
+    animation: hero-fade-in 0.7s ease-out;
+  }
 
-    @keyframes hero-fade-in {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+  @keyframes hero-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 }

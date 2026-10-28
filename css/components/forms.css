@@ -16,21 +16,16 @@ form {
     >.form-field {
         display: flex;
         flex-direction: column;
-        gap: var(--space-sm);
         width: 100%;
+        gap: var(--space-sm);
 
         >input:not([type="checkbox"]),
         >textarea {
             padding: var(--space-md);
-            border-radius: var(--radius-card);
             border: 1px solid var(--color-border-subtle);
+            border-radius: var(--radius-card);
             background: var(--color-bg-main);
-        }
     }
-
-    >.consent>input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
     }
 
     >.consent {
@@ -42,5 +37,10 @@ form {
         >a {
             grid-column: 1 / -1;
         }
+    }
+
+    >.consent>input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
     }
 }

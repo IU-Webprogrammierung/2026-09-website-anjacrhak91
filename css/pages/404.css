@@ -1,57 +1,57 @@
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100svh;
 
-    >header {
-        background-color: var(--color-bg-main);
-    }
+  >header {
+    background-color: var(--color-bg-main);
+  }
 
-    >main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--color-bg-main);
+  >main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-main);
 
-        >section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: var(--space-lg);
-            padding-block: var(--space-3xl);
-            padding-inline: var(--container-inline-padding);
-            background-color: var(--color-bg-main);
+    >section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-lg);
+      padding-block: var(--space-3xl);
+      padding-inline: var(--container-inline-padding);
+      background-color: var(--color-bg-main);
 
-            >p+.button-group {
-                margin-block-start: var(--space-lg);
-            }
+      >p+.button-group {
+        margin-block-start: var(--space-lg);
+      }
 
-            >.button-group {
-                width: 100%;
+      >.button-group {
+        width: 100%;
 
-                @media (min-width: 48rem) {
-                    width: auto;
-                    justify-content: center;
-                }
-            }
+        @media (min-width: 48rem) {
+          width: auto;
+          justify-content: center;
         }
+      }
     }
+  }
 }
 
 .error-code {
-    font-family: var(--font-heading);
-    font-size: 7.5rem;
-    line-height: 1;
-    font-weight: var(--fw-bold);
-    color: var(--color-brand-primary);
+  font-family: var(--font-heading);
+  font-size: 7.5rem;
+  line-height: 1;
+  font-weight: var(--fw-bold);
+  color: var(--color-brand-primary);
 
-    @media (min-width: 48rem) {
-        font-size: 20rem;
-    }
+  @media (min-width: 48rem) {
+    font-size: 20rem;
+  }
 
-    @media (min-width: 64rem) {
-        font-size: 25rem;
-    }
+  @media (min-width: 64rem) {
+    font-size: 25rem;
+  }
 }

@@ -40,12 +40,6 @@ textarea {
   color: inherit;
 }
 
-/* Remove default fieldset styling */
-fieldset {
-  border: none;
-  min-inline-size: 0;
-}
-
 button {
   background: none;
   border: none;
@@ -79,7 +73,7 @@ h6 {
   }
 }
 
-/* Normal font-style for address element*/
+/* Reset the browser's default italic styling on address elements */
 address {
   font-style: normal;
 }

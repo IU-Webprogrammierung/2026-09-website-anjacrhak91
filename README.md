@@ -1,6 +1,7 @@
 # Portfolio-Website Anja Crhak
 **Studienprojekt Web-Programmierung (DLBUXPWP01)| B.Sc. Medieninformatik**
 **IU Internationale Hochschule**
+Stand: 02.11.2026
 
 ## Projektbeschreibung
 

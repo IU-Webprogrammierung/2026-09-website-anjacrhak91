@@ -14,6 +14,7 @@ Ziel ist die Entwicklung einer modernen, responsiven Portfolio-Website, die den 
 ## Inhaltsverzeichnis
 
 - [Seitenstruktur & geplante Inhalte](#seitenstruktur--geplante-inhalte)
+- [Sprachversionen & Seitenzuordnung](#sprachversionen--seitenzuordnung)
 - [Responsive Design](#responsive-design--breakpoint-konzept)
 - [Designkonzept: Wireframes & Figma-Prototypen](#designkonzept-wireframes--figma-prototypen)
 - [Barrierefreiheit](#barrierefreiheit)
@@ -38,6 +39,22 @@ Ziel ist die Entwicklung einer modernen, responsiven Portfolio-Website, die den 
 | `impressum.html` | Impressum | Anbieterkennzeichnung nach § 5 DDG, Haftungsausschluss & Bildnachweise für ein nicht-kommerzielles Studienprojekt. |
 | `datenschutz.html` | Datenschutz | Datenschutzerklärung gemäß DSGVO (Kontaktformular, Server-Log-Dateien, Rechte der Betroffenen). |
 | `404.html` | 404 Fehlerseite | Benutzerfreundliche Fehlerseite bei nicht vorhandenen Pfaden mit Schnelllinks zur Startseite und zu den Projekten. |
+
+## Sprachversionen & Seitenzuordnung
+
+Die deutsche Website liegt im Projekt-Root. Die englische Version befindet sich im Verzeichnis `en/`. Der Sprachumschalter im Footer führt jeweils zur entsprechenden Seite in der anderen Sprache. Bilder, Stylesheets und Skripte werden von beiden Sprachversionen gemeinsam genutzt.
+
+| Deutsche Seite | Englische Seite |
+| :--- | :--- |
+| `index.html` | `en/index.html` |
+| `karriere.html` | `en/career.html` |
+| `projekte.html` | `en/projects.html` |
+| `kulinarik.html` | `en/culinary.html` |
+| `kontakt.html` | `en/contact.html` |
+| `story.html` | `en/story.html` |
+| `datenschutz.html` | `en/privacy.html` |
+| `impressum.html` | `en/legal-notice.html` |
+| `404.html` | `en/404.html` |
 
 ## Responsive Design & Breakpoint-Konzept
 Die Website folgt dem Mobile-First-Ansatz: Das Basislayout wird über drei Hauptbreakpoints mit min-width-Media-Queries schrittweise für größere Viewports erweitert.
@@ -140,12 +157,27 @@ Die interaktiven Funktionen sind in zwei Vanilla-JavaScript-Dateien im Verzeichn
 │   │   ├── culinary/
 │   │   └── tools/
 │   └── logos/            # Site-Logos (SVG)
-├── components/           # Wiederverwendbare HTML-Fragmente (Header, Footer)
+├── components/
+│   ├── en/               # Englische Header- und Footer-Fragmente
+│   │   ├── footer.html
+│   │   └── header.html
+│   ├── footer.html       # Deutsches Footer-Fragment
+│   └── header.html       # Deutsches Header-Fragment
 ├── css/                  # Modulares Stylesheet-System
 │   ├── base/             # Grundstyling, Tokens & Reset
 │   ├── components/       # UI-Komponenten (Cards, Buttons, Forms etc.)
 │   ├── pages/            # Seitenspezifische Styles
 │   └── style.css         # Zentrale Import-Datei
+├── en/                   # Englische Seiten
+│   ├── 404.html
+│   ├── career.html
+│   ├── contact.html
+│   ├── culinary.html
+│   ├── index.html
+│   ├── legal-notice.html
+│   ├── privacy.html
+│   ├── projects.html
+│   └── story.html
 ├── script/               # JavaScript-Module (Loader, Theme-Toggle)
 ├── 404.html              # Fehlerseite
 ├── datenschutz.html      # Datenschutzerklärung

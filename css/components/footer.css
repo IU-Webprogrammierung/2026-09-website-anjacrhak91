@@ -73,7 +73,7 @@ body {
 
     >.footer-social {
       @media (min-width: 48rem) {
-        grid-column: span 3;
+        grid-column: span 2;
       }
     }
 

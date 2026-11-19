@@ -1,6 +1,9 @@
 // Load the shared header and footer.
-loadComponent('header', 'components/header.html');
-loadComponent('footer', 'components/footer.html');
+const isEnglish = document.documentElement.lang === 'en';
+const componentPath = isEnglish ? '../components/en/' : 'components/';
+
+loadComponent('header', `${componentPath}header.html`);
+loadComponent('footer', `${componentPath}footer.html`);
 
 
 // Fetch a component and insert it into its placeholder.
@@ -15,11 +18,14 @@ async function loadComponent(selector, path) {
         initHeaderScroll(element);
         const button = element.querySelector('.hamburger-toggle');
         const navigation = element.querySelector('#site-nav-menu');
+        const navigationLabels = isEnglish
+            ? { open: 'Open navigation', close: 'Close navigation' }
+            : { open: 'Navigation öffnen', close: 'Navigation schließen' };
 
         button.addEventListener('click', () => {
             const isOpen = button.getAttribute('aria-expanded') === 'true';
             button.setAttribute('aria-expanded', String(!isOpen));
-            button.setAttribute('aria-label', isOpen ? 'Navigation öffnen' : 'Navigation schließen');
+            button.setAttribute('aria-label', isOpen ? navigationLabels.open : navigationLabels.close);
 
             // Focus the first link in the navigation when it is opened.
             if (!isOpen) {
@@ -34,7 +40,7 @@ async function loadComponent(selector, path) {
                 button.getAttribute('aria-expanded') === 'true'
             ) {
                 button.setAttribute('aria-expanded', 'false');
-                button.setAttribute('aria-label', 'Navigation öffnen');
+                button.setAttribute('aria-label', navigationLabels.open);
                 button.focus();
             }
         });
@@ -42,6 +48,7 @@ async function loadComponent(selector, path) {
 
     if (selector === 'footer') {
         initScrollToTop(element);
+        initLanguageSwitch(element);
     }
 
 
@@ -61,6 +68,37 @@ async function loadComponent(selector, path) {
             link.removeAttribute('aria-current');
         }
     });
+}
+
+function initLanguageSwitch(footer) {
+    const languageSwitch = footer.querySelector('[data-language-switch]');
+    if (!languageSwitch) return;
+
+    const pagePairs = {
+        'index.html': 'index.html',
+        'karriere.html': 'career.html',
+        'projekte.html': 'projects.html',
+        'story.html': 'story.html',
+        'kulinarik.html': 'culinary.html',
+        'kontakt.html': 'contact.html',
+        'impressum.html': 'legal-notice.html',
+        'datenschutz.html': 'privacy.html',
+        '404.html': '404.html'
+    };
+    const currentPage = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+    const isEnglishPage = document.documentElement.lang === 'en';
+    const pairedPage = isEnglishPage
+        ? Object.keys(pagePairs).find((germanPage) => pagePairs[germanPage] === currentPage)
+        : pagePairs[currentPage];
+
+    if (!pairedPage) {
+        languageSwitch.href = isEnglishPage ? '../index.html' : 'en/index.html';
+        return;
+    }
+
+    languageSwitch.href = isEnglishPage
+        ? `../${pairedPage}`
+        : `en/${pairedPage}`;
 }
 
 // Make the header background transparent when scrolled past its height.

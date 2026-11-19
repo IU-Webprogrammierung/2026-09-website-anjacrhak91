@@ -172,7 +172,6 @@ Die interaktiven Funktionen sind in zwei Vanilla-JavaScript-Dateien im Verzeichn
 │   ├── pages/            # Seitenspezifische Styles
 │   └── style.css         # Zentrale Import-Datei
 ├── en/                   # Englische Seiten
-│   ├── 404.html
 │   ├── career.html
 │   ├── contact.html
 │   ├── culinary.html

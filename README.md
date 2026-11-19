@@ -1,7 +1,7 @@
 # Portfolio-Website Anja Crhak
 **Studienprojekt Web-Programmierung (DLBUXPWP01)| B.Sc. Medieninformatik**
 **IU Internationale Hochschule**
-Stand: 02.11.2026
+Stand: 19.11.2026
 
 ## Projektbeschreibung
 
@@ -42,7 +42,7 @@ Ziel ist die Entwicklung einer modernen, responsiven Portfolio-Website, die den 
 
 ## Sprachversionen & Seitenzuordnung
 
-Die deutsche Website liegt im Projekt-Root. Die englische Version befindet sich im Verzeichnis `en/`. Der Sprachumschalter im Footer führt jeweils zur entsprechenden Seite in der anderen Sprache. Bilder, Stylesheets und Skripte werden von beiden Sprachversionen gemeinsam genutzt.
+Die deutsche Website liegt im Projekt-Root. Die englische Version befindet sich im Verzeichnis `en/`. Sprachenkennzeichnung erfolgt über das `lang`-Attribut. Der Sprachumschalter im Footer führt anhand einer Seitenzuordnung zur entsprechenden Seite in der anderen Sprache. Bilder, Stylesheets und Skripte werden von beiden Sprachversionen gemeinsam genutzt.
 
 | Deutsche Seite | Englische Seite |
 | :--- | :--- |
@@ -54,7 +54,10 @@ Die deutsche Website liegt im Projekt-Root. Die englische Version befindet sich 
 | `story.html` | `en/story.html` |
 | `datenschutz.html` | `en/privacy.html` |
 | `impressum.html` | `en/legal-notice.html` |
-| `404.html` | `en/404.html` |
+
+GitHub Pages verwendet für nicht gefundene URLs die Root-Datei `404.html`. Diese erkennt, ob die angefragte URL zum englischen Bereich `/en/` gehört, und zeigt dann die englische Fehlerseite an. Hinweis: Der Projektpfad muss angepasst werden, falls sich die GitHub-Pages-URL oder der Repositoryname ändert.
+
+Die deutschen und englischen Seiten enthalten gegenseitige `hreflang`-Angaben.
 
 ## Responsive Design & Breakpoint-Konzept
 Die Website folgt dem Mobile-First-Ansatz: Das Basislayout wird über drei Hauptbreakpoints mit min-width-Media-Queries schrittweise für größere Viewports erweitert.
@@ -117,7 +120,7 @@ Die HTML-Dateien sind nach Standards der digitalen Barrierefreiheit (WCAG 2.1 Le
 | **HTML5** | Phase 1–3 | Semantischer & barrierefreier Seitenaufbau (WCAG 2.1 AA) aller 9 Seitentypen |
 | **CSS3** | Phase 2–3 | Visuals, Komponenten-Styling, Layout-Raster & UI-Design |
 | **Media Queries** | Phase 2–3 | Responsive Anpassung & Breakpoint-Steuerung (360px bis 1920px) |
-| **JavaScript (Vanilla JS)** | Phase 2–3 | Interaktive UI-Steuerung (Hamburger-Menü, Dark-Mode-Toggle, evtl. Sprach-Toggle) |
+| **JavaScript (Vanilla JS)** | Phase 2–3 | Interaktive UI-Steuerung (Hamburger-Menü, Dark-Mode-Toggle, sprachabhängige Komponenten und Footer-Sprachwechsel) |
 | **Git & GitHub** | Phase 1–3 | Versionskontrolle, Commit-Historie, Tagging der Phasen & Code-Repository |
 | **Webfonts / Google Fonts (Self-Hosted)** | Phase 2 | Lokale Einbindung im Repository |
 
@@ -133,9 +136,9 @@ Die interaktiven Funktionen sind in zwei Vanilla-JavaScript-Dateien im Verzeichn
 
 ### `loader.js`
 
-* Lädt `components/header.html` und `components/footer.html` über `fetch()` und fügt sie in die dafür vorgesehenen Bereiche der Seiten ein.
+* Lädt abhängig vom `lang`-Attribut der Seite die deutschen Fragmente aus `components/` oder die englischen Fragmente aus `components/en/` und fügt sie über `fetch()` in die vorgesehenen Bereiche ein.
 * Initialisiert das Hamburger-Menü einschließlich ARIA-Zustand, Fokussteuerung und Schließen mit Escape.
-* Markiert den Link zur aktuellen Seite mit `aria-current="page"`.
+* Markiert den Link zur aktuellen Seite mit `aria-current="page"` und setzt den Footer-Sprachwechsel anhand der Seitenzuordnung auf das jeweilige Sprach-Pendant.
 * Passt den Header beim Scrollen an und blendet den Back-to-Top-Link nach einer halben Viewporthöhe ein.
 
 ### Einbindung
@@ -203,7 +206,7 @@ Die einzelnen Projektphasen werden im Repository über drei Git-Tags gekennzeich
 In **Phase 1** wurden die semantische HTML-Struktur und die Ressourcen vorbereitet. In **Phase 2** wurden das responsive CSS-Layout sowie die interaktiven Funktionen mit JavaScript umgesetzt. **Phase 3** dient der abschließenden Prüfung, Optimierung und Finalisierung.
 
 
-| Funktionalität | Phase | Umsetzungsstand (Phase 2) |
+| Funktionalität | Phase | Umsetzungsstand |
 | :--- | :--- | :--- |
 | **Favicon & App-Icons** | Phase 1 | SVG-/ICO-Favicon, Apple-Touch-Icon und Web-App-Manifest eingebunden. |
 | **Web-optimierte Bilder** | Phase 1 | AVIF mit WebP-Fallback über `<picture>` eingebunden; responsive Darstellung umgesetzt. |
@@ -213,7 +216,7 @@ In **Phase 1** wurden die semantische HTML-Struktur und die Ressourcen vorbereit
 | **Akkordeons & Details** | Phase 1–2 | Native Aufklappfunktion mit `<details>` und `<summary>` umgesetzt und gestaltet. |
 | **Skip-to-Content-Link** | Phase 1–2 | Bei Tastaturfokus sichtbar; direkter Sprung zum Hauptinhalt umgesetzt. |
 | **Back-to-Top-Link** | Phase 1–3 | Scrollabhängige Einblendung und sanftes Zurückscrollen umgesetzt; reduzierte Bewegung berücksichtigt. |
-| **Mehrsprachigkeit** | Phase 3 | Optional vorgesehen; bislang nicht implementiert. |
+| **Mehrsprachigkeit** | Phase 3 | Deutsche und englische Seiten sowie sprachabhängige Header- und Footer-Fragmente sind angelegt. Der Footer-Sprachwechsel führt zur zugeordneten Seite. Die Root-404 erkennt englische Fehlerpfade und lokalisiert den Skip-Link. Gegenseitige `hreflang`-Angaben sind eingebunden. |
 
 ## Testing & Qualitätssicherung
 
@@ -225,6 +228,7 @@ Die Website ist für Google Chrome optimiert. Barrierefreiheit und responsives V
 * **Lighthouse:** Automatisierte Prüfung, unter anderem der Kategorien Barrierefreiheit und Best Practices.
 * **WAVE:** Prüfung auf mögliche Barrierefreiheitsprobleme.
 * **Hell- und Dunkelmodus:** Prüfung der Darstellung und Farbkontraste in beiden Farbschemata.
+* **Mehrsprachigkeit:** Lokale Seitenzuordnung, Ressourcenverweise und gegenseitige `hreflang`-Angaben der deutschen und englischen Seiten wurden geprüft.
 
 ### Testergebnisse
 

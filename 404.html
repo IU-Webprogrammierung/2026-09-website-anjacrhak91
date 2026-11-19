@@ -6,17 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Seite nicht gefunden</title>
 
-    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" sizes="any">
-    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" sizes="180x180">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="icon" data-site-resource="assets/favicon/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" data-site-resource="assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" data-site-resource="assets/favicon/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" data-site-resource="assets/favicon/site.webmanifest">
 
-    <script src="script/theme.js"></script>
+    <link rel="stylesheet" data-site-resource="css/style.css">
+    <link rel="stylesheet" data-site-resource="css/pages/404.css">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages/404.css">
+    <script>
+        (() => {
+            const githubPagesBase = '/2026-09-website-anjacrhak91/';
+            const siteRootPath = window.location.hostname === 'iu-webprogrammierung.github.io'
+                ? githubPagesBase
+                : '/';
+            const siteRoot = new URL(siteRootPath, window.location.origin);
+            const requestedPath = window.location.pathname.startsWith(siteRootPath)
+                ? window.location.pathname.slice(siteRootPath.length)
+                : window.location.pathname.replace(/^\/+/, '');
+            const isEnglish = requestedPath === 'en' || requestedPath.startsWith('en/');
 
-    <script src="script/loader.js" defer></script>
+            document.documentElement.lang = isEnglish ? 'en' : 'de';
+            document.documentElement.dataset.siteRoot = siteRootPath;
+            document.title = isEnglish ? '404 - Page Not Found' : '404 - Seite nicht gefunden';
+
+            try {
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (error) {
+                // The page can use the default light theme if storage is unavailable.
+            }
+
+            document.querySelectorAll('[data-site-resource]').forEach((resource) => {
+                resource.href = new URL(resource.dataset.siteResource, siteRoot).href;
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const themeScript = document.createElement('script');
+                themeScript.src = new URL('script/theme.js', siteRoot).href;
+                themeScript.onload = () => {
+                    const loaderScript = document.createElement('script');
+                    loaderScript.src = new URL('script/loader.js', siteRoot).href;
+                    document.head.append(loaderScript);
+                };
+                document.head.append(themeScript);
+            });
+        })();
+    </script>
 </head>
 
 <body id="page-top">
@@ -29,14 +66,23 @@
 
     <!-- Main content -->
     <main id="main-content" tabindex="-1">
-        <section>
-                <span class="error-code">404</span>
-                <h1 class="title-2">Ooops, die Seite habe ich nicht gefunden.</h1>
-                <p class="title-4">Du willst wieder zurück und mehr entdecken? Dann hier lang</p>
-                <div class="button-group">
-                    <a href="index.html" class="button button--primary">Zurück zur Startseite</a>
-                    <a href="projekte.html" class="button button--secondary">Projekte anschauen</a>
-                </div>
+        <section data-error-locale="de">
+            <span class="error-code">404</span>
+            <h1 class="title-2">Ups, diese Seite habe ich nicht gefunden.</h1>
+            <p class="title-4">Möchtest du zurück und noch mehr entdecken? Hier geht's weiter.</p>
+            <div class="button-group">
+                <a href="index.html" data-site-route="index.html" class="button button--primary">Zurück zur Startseite</a>
+                <a href="projekte.html" data-site-route="projekte.html" class="button button--secondary">Projekte ansehen</a>
+            </div>
+        </section>
+        <section data-error-locale="en" hidden>
+            <span class="error-code">404</span>
+            <h1 class="title-2">Oops, I couldn't find that page.</h1>
+            <p class="title-4">Want to head back and explore some more? This way.</p>
+            <div class="button-group">
+                <a href="index.html" data-site-route="index.html" class="button button--primary">Back to home</a>
+                <a href="projects.html" data-site-route="projects.html" class="button button--secondary">Browse projects</a>
+            </div>
         </section>
     </main>
 
@@ -44,6 +90,21 @@
     <footer>
 
     </footer>
+    <script>
+        (() => {
+            const currentLanguage = document.documentElement.lang;
+            const siteRoot = new URL(document.documentElement.dataset.siteRoot, window.location.origin);
+
+            document.querySelectorAll('[data-error-locale]').forEach((section) => {
+                section.hidden = section.dataset.errorLocale !== currentLanguage;
+            });
+
+            document.querySelectorAll('[data-site-route]').forEach((link) => {
+                const localePath = currentLanguage === 'en' ? 'en/' : '';
+                link.href = new URL(`${localePath}${link.dataset.siteRoute}`, siteRoot).href;
+            });
+        })();
+    </script>
 </body>
 
 </html>

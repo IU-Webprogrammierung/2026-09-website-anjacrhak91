@@ -1,9 +1,12 @@
 // Load the shared header and footer.
 const isEnglish = document.documentElement.lang === 'en';
-const componentPath = isEnglish ? '../components/en/' : 'components/';
+const scriptUrl = document.currentScript ? document.currentScript.src : window.location.href;
+const siteRoot = new URL(document.documentElement.dataset.siteRoot || '../', scriptUrl);
+const localeRoot = new URL(isEnglish ? 'en/' : '', siteRoot);
+const componentPath = new URL(`components/${isEnglish ? 'en/' : ''}`, siteRoot);
 
-loadComponent('header', `${componentPath}header.html`);
-loadComponent('footer', `${componentPath}footer.html`);
+loadComponent('header', new URL('header.html', componentPath).href);
+loadComponent('footer', new URL('footer.html', componentPath).href);
 
 
 // Fetch a component and insert it into its placeholder.
@@ -12,6 +15,7 @@ async function loadComponent(selector, path) {
     const html = await response.text();
     const element = document.querySelector(selector);
     element.innerHTML = html;
+    normalizeLocalReferences(element);
 
     if (selector === 'header') {
         initThemeToggle();
@@ -70,6 +74,28 @@ async function loadComponent(selector, path) {
     });
 }
 
+function normalizeLocalReferences(element) {
+    element.querySelectorAll('[href], [src], [srcset]').forEach((node) => {
+        ['href', 'src', 'srcset'].forEach((attribute) => {
+            const value = node.getAttribute(attribute);
+            if (!value || value.startsWith('#')) return;
+
+            if (attribute === 'srcset') {
+                const candidates = value.split(',').map((candidate) => {
+                    const [url, ...descriptors] = candidate.trim().split(/\s+/);
+                    if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(url)) return candidate.trim();
+                    return `${new URL(url, localeRoot).href} ${descriptors.join(' ')}`.trim();
+                });
+                node.setAttribute(attribute, candidates.join(', '));
+                return;
+            }
+
+            if (/^(?:[a-z][a-z\d+.-]*:|\/\/)/i.test(value)) return;
+            node.setAttribute(attribute, new URL(value, localeRoot).href);
+        });
+    });
+}
+
 function initLanguageSwitch(footer) {
     const languageSwitch = footer.querySelector('[data-language-switch]');
     if (!languageSwitch) return;
@@ -83,22 +109,24 @@ function initLanguageSwitch(footer) {
         'kontakt.html': 'contact.html',
         'impressum.html': 'legal-notice.html',
         'datenschutz.html': 'privacy.html',
-        '404.html': '404.html'
     };
-    const currentPage = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+    const currentPath = window.location.pathname.startsWith(siteRoot.pathname)
+        ? window.location.pathname.slice(siteRoot.pathname.length)
+        : window.location.pathname.replace(/^\/+/, '');
+    const currentPage = currentPath.split('/').filter(Boolean).pop() || 'index.html';
     const isEnglishPage = document.documentElement.lang === 'en';
     const pairedPage = isEnglishPage
         ? Object.keys(pagePairs).find((germanPage) => pagePairs[germanPage] === currentPage)
         : pagePairs[currentPage];
 
     if (!pairedPage) {
-        languageSwitch.href = isEnglishPage ? '../index.html' : 'en/index.html';
+        languageSwitch.href = new URL(isEnglishPage ? 'index.html' : 'en/index.html', siteRoot).href;
         return;
     }
 
     languageSwitch.href = isEnglishPage
-        ? `../${pairedPage}`
-        : `en/${pairedPage}`;
+        ? new URL(pairedPage, siteRoot).href
+        : new URL(`en/${pairedPage}`, siteRoot).href;
 }
 
 // Make the header background transparent when scrolled past its height.
